@@ -190,3 +190,18 @@ header {
 .contact-address {
     background-image: url(img/icon-local.png);
 }
+/*-----------------------------------------*/
+/*                  FOOTER                 */
+/*-----------------------------------------*/
+
+footer {
+    height: 280px;
+    background-color: #333;
+}
+
+.footer-facebook {
+    float: right;
+    width: 550px;
+    margin-top: 20px;
+    background-color: #ccc;
+}
