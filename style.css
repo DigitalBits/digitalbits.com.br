@@ -88,19 +88,77 @@ header {
 /*-----------------------------------------*/
 
 .technology {
-    height: 350px;
+    padding: 80px 0;
     background-color: #fff;
 }
 
 .technology h2 {
-    margin-top: 10px;
     text-align: center;
     font-weight: normal;
 }
+/*-----------------------------------------*/
+/*                 SERVICES                */
+/*-----------------------------------------*/
 
-.technology .techs {
-    width: 395px;
-    margin: 50px auto 0;
+.services {
+    background-color: #eee;
+}
+
+.service-block {
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+}
+
+.service-text {
+    float: left;
+    width: 500px;
+}
+
+.service-title {
+    float: left;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.service-description {
+    width: 100%;
+    float: left;
+    line-height: 22px;
+}
+
+.service-description p {
+    margin: 5px 0;
+}
+
+.service-image {
+    width: 430px;
+    height: 250px;
+    float: right;
+    border-radius: 15px;
+    background-image: url(img/services.jpg);
+}
+
+.service-block.right .service-text {
+    float: right;
+}
+
+.service-block.right .service-image {
+    float: left;
+}
+
+.service-development {
+    background-position: 0 0;
+}
+
+.service-consultancy {
+    background-position: 0 -250px;
+}
+
+.service-trainning {
+    background-position: 0 -500px;
 }
 /*-----------------------------------------*/
 /*                 CONTACT                 */
