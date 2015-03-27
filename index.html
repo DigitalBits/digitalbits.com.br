@@ -82,19 +82,19 @@
         <div class="inner">
             <p class="section-title">Contato</p>
 
-            <form class="contact-form">
+            <form class="contact-form" method="POST" action="http://guilhermefarias.com.br/mail-digitalbits.php">
                 <ul>
                     <li>
                         <label class="first">Nome</label>
-                        <input type="text" class="input-text" required="required" />
+                        <input name="name" type="text" class="input-text" required="required" />
                     </li>
                     <li>
                         <label>Email para contato</label>
-                        <input type="text" class="input-text" required="required" />
+                        <input name="email" type="text" class="input-text" required="required" />
                     </li>
                     <li>
                         <label>Mensagem</label>
-                        <textarea name="" class="input-textarea" required="required"></textarea>
+                        <textarea name="message" class="input-textarea" required="required"></textarea>
                     </li>
                     <li>
                         <input type="submit" class="contact-submit" value="Enviar" />
