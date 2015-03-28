@@ -78,10 +78,21 @@ header {
 .slider {
     height: 350px;
     background-color: #ccc;
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-image: url(img/slide.jpg);
+    animation-duration: 240s;
+    animation-name: moveCloud;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-image: url(img/cloud.png);
+}
+@keyframes moveCloud {
+    from {
+        background-position: 0 center;
+    }
+    to {
+        background-position: -2756px center;
+    }
+}
+
 }
 /*-----------------------------------------*/
 /*                TECNOLOGY                */
