@@ -84,6 +84,39 @@ header {
     animation-iteration-count: infinite;
     background-image: url(img/cloud.png);
 }
+
+.slider-techs {
+    width: 483px;
+    height: 126px;
+    margin: 50px auto 0;
+}
+
+.slider-tech {
+    width: 111px;
+    height: 126px;
+    float: left;
+    margin: 0 25px;
+    animation-duration: 2s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    background-image: url(img/techs.png);
+}
+
+.slider-tech.angular {
+    background-position: 0 0;
+    animation-delay: 0s;
+}
+
+.slider-tech.node {
+    background-position: -117px 0;
+    animation-delay: 0.3s;
+}
+
+.slider-tech.html5 {
+    background-position: -233px 0;
+    animation-delay: 0.6s;
+}
+
 @keyframes moveCloud {
     from {
         background-position: 0 center;
@@ -93,6 +126,16 @@ header {
     }
 }
 
+@keyframes bounce {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 30px;
+    }
+    100% {
+        margin-top: 0;
+    }
 }
 /*-----------------------------------------*/
 /*                TECNOLOGY                */
