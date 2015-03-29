@@ -220,6 +220,55 @@ header {
 .service-trainning {
     background-position: 0 -500px;
 /*-----------------------------------------*/
+/*                   WE                    */
+/*-----------------------------------------*/
+
+.we {
+    padding-top: 110px;
+    background-color: #fff;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(img/bg-green-white.png);
+}
+
+.we-block {
+    width: 333px;
+    float: left;
+    padding: 10px;
+}
+
+.we-thumb {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.we-thumb.mission {
+    background-image: url(img/we-mission.png);
+}
+
+.we-thumb.vision {
+    background-image: url(img/we-vision.png);
+}
+
+.we-thumb.values {
+    background-image: url(img/we-values.png);
+}
+
+.we-title {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.we-text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+}
+/*-----------------------------------------*/
 /*                CUSTOMERS                */
 /*-----------------------------------------*/
 
@@ -326,6 +375,23 @@ header {
 .customer.fianseg {
     background-image: url(img/customers/fianseg.png);
 }
+/*-----------------------------------------*/
+/*                  HIRING                 */
+/*-----------------------------------------*/
+
+.hiring {
+    padding-top: 110px;
+    background-color: #fff;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(img/bg-gray-white.png);
+}
+
+.hiring-text {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 10px 0;
+    text-align: center;
 }
 /*-----------------------------------------*/
 /*                 CONTACT                 */
