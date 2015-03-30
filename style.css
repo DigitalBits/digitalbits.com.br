@@ -83,12 +83,28 @@ header {
 
 .slider {
     height: 350px;
+    position: relative;
     background-color: #ccc;
     animation-duration: 240s;
     animation-name: moveCloud;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    -webkit-animation-duration: 240s;
+    -webkit-animation-name: moveCloud;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
     background-image: url(img/cloud.jpg);
+}
+
+.slider-clouds {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: 70px;
+    position: absolute;
+    background-size: auto 50px;
+    background-image: url(img/cloud-up.png);
 }
 
 .slider-techs {
@@ -105,25 +121,40 @@ header {
     animation-duration: 2s;
     animation-name: bounce;
     animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: bounce;
+    -webkit-animation-iteration-count: infinite;
     background-image: url(img/techs.png);
 }
 
 .slider-tech.angular {
     background-position: 0 0;
     animation-delay: 0s;
+    -webkit-animation-delay: 0s;
 }
 
 .slider-tech.node {
     background-position: -117px 0;
     animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
 }
 
 .slider-tech.html5 {
     background-position: -233px 0;
     animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
 }
 
 @keyframes moveCloud {
+    from {
+        background-position: 0 center;
+    }
+    to {
+        background-position: -2756px center;
+    }
+}
+
+@-webkit-keyframes moveCloud {
     from {
         background-position: 0 center;
     }
@@ -143,12 +174,24 @@ header {
         margin-top: 0;
     }
 }
+
+@-webkit-keyframes bounce {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 30px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
 /*-----------------------------------------*/
 /*                TECNOLOGY                */
 /*-----------------------------------------*/
 
 .technology {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: #fff;
 }
 
@@ -161,7 +204,24 @@ header {
 /*-----------------------------------------*/
 
 .services {
-    background-color: #eee;
+    color: #fff;
+    padding: 90px 0 0 0;
+    position: relative;
+    background-color: #27ae60;
+}
+
+.services .section-title {
+    text-align: left;
+}
+
+.services-clouds {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-size: auto 50px;
+    background-image: url(img/cloud-down.png);
 }
 
 .service-block {
@@ -187,6 +247,7 @@ header {
     width: 100%;
     float: left;
     line-height: 22px;
+    color: #fff;
 }
 
 .service-description p {
@@ -194,11 +255,7 @@ header {
 }
 
 .service-image {
-    width: 430px;
-    height: 250px;
     float: right;
-    border-radius: 15px;
-    background-image: url(img/services.jpg);
 }
 
 .service-block.right .service-text {
@@ -210,15 +267,26 @@ header {
 }
 
 .service-development {
-    background-position: 0 0;
+    width: 489px;
+    height: 469px;
+    margin-top: -130px;
+    background-image: url(img/service-development.png);
 }
 
 .service-consultancy {
-    background-position: 0 -250px;
+    width: 453px;
+    height: 400px;
+    margin-top: -130px;
+    background-image: url(img/service-consultancy.png);
 }
 
 .service-trainning {
-    background-position: 0 -500px;
+    width: 476px;
+    height: 451px;
+    margin-top: -80px;
+    margin-bottom: -55px;
+    background-image: url(img/service-trainning.png);
+}
 /*-----------------------------------------*/
 /*                   WE                    */
 /*-----------------------------------------*/
