@@ -605,3 +605,54 @@ footer .inner {
     margin-top: 50px;
     background-color: #ccc;
 }
+
+/*-----------------------------------------*/
+/*          TABLET MEDIA QUERY             */
+/*-----------------------------------------*/
+
+@media (max-width: 800px) {
+
+    .service-text {
+        width: 100%;
+        float: left !important;
+    }
+
+    .inner,
+    .footer-lighthouse {
+        width: 90%;
+    }
+
+    .we-block {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding-right: 0;
+        border: none;
+    }
+
+    .contact-text {
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .contact-info p {
+        width: 100%;
+        display: block;
+    }
+
+    #hiring,
+    #customers,
+    .header-nav,
+    .service-image,
+    .footer-facebook {
+        display: none;
+    }
+}
+
+
