@@ -662,13 +662,13 @@ footer .inner {
 
 @media (max-width: 400px) {
     .slider-techs {
-        width: 350px;
+        width: 300px;
     }
 
     .slider-tech {
         width: 90px;
         height: 97px;
-        margin: 0 13px;
+        margin: 0 5px;
         background-size: cover;
     }
 
@@ -678,5 +678,9 @@ footer .inner {
 
     .slider-tech.html5 {
         background-position: -175px 0px;
+    }
+
+    .section-title {
+        font-size: 40px;
     }
 }
