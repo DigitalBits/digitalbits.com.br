@@ -656,3 +656,27 @@ footer .inner {
 }
 
 
+/*-----------------------------------------*/
+/*         SMARTPHONE MEDIA QUERY          */
+/*-----------------------------------------*/
+
+@media (max-width: 400px) {
+    .slider-techs {
+        width: 350px;
+    }
+
+    .slider-tech {
+        width: 90px;
+        height: 97px;
+        margin: 0 13px;
+        background-size: cover;
+    }
+
+    .slider-tech.node {
+        background-position: -87px 0px;
+    }
+
+    .slider-tech.html5 {
+        background-position: -175px 0px;
+    }
+}
