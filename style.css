@@ -264,21 +264,20 @@ footer .inner {
     margin-top: 80px;
 }
 
-.footer-email,
-.footer-address {
+.footer-row {
     float: left;
+    display: block;
     line-height: 24px;
-    padding: 10px 0 10px 40px;
-    background-repeat: no-repeat;
-    background-position: left center;
+    padding: 10px 0 10px 50px;
 }
 
-.footer-email {
-    background-image: url(img/icon-email.png);
-}
-
-.footer-address {
-    background-image: url(img/icon-local.png);
+.footer-icon {
+    float: left;
+    display: block;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    margin-left: -50px;
 }
 
 .footer-facebook {
