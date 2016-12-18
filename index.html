@@ -4,10 +4,9 @@
 <head>
     <title>DigitalBits</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <meta name="description" content="Utilizamos tecnologias web inovadoras para entregar produtos melhores, simples, rápidos, para que sua empresa sempre fique anos à frente da concorrência!" />
     <meta name="keywords" content="JavaScript, NodeJS, NodeJS Recife, NodeJS Software, Consultoria NodeJS, Web Developer" />
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="DigitalBits" />
     <meta property="og:site_name" content="DigitalBits" />
@@ -26,69 +25,21 @@
 <body>
     <header>
         <div class="inner">
-            <h1 class="header-logo">DigitalBits</h1>
+            <h1 class="header-logo"></h1>
             <nav class="header-nav">
-                <a href="#slider" class="header-link">Home</a>
-                <a href="#services" class="header-link">Serviços</a>
-                <a href="#we" class="header-link">Sobre Nós</a>
-                <a href="#hiring" class="header-link">Carreira</a>
-                <a href="#contact" class="header-link">Contato</a>
+                <!-- <a href="#slider" class="header-link">Home</a> -->
+                <!-- <a href="#services" class="header-link">Produtos</a> -->
+                <!-- <a href="#we" class="header-link">Sobre Nós</a> -->
+                <!-- <a href="#hiring" class="header-link">Carreira</a> -->
+                <!-- <a href="#contact" class="header-link">Contato</a> -->
             </nav>
         </div>
     </header>
 
     <section id="slider" class="slider">
-        <div class="slider-techs">
-            <div class="slider-tech angular"></div>
-            <div class="slider-tech node"></div>
-            <div class="slider-tech html5"></div>
-        </div>
+        <h2 class="slider-text">Utilizamos tecnologias web inovadoras para entregar produtos melhores, simples e rápidos!</h2>
+        <div id="particle-canvas"></div>
         <div class="slider-clouds"></div>
-    </section>
-
-    <section class="technology">
-        <div class="inner">
-            <h2>Utilizamos tecnologias web inovadoras para entregar produtos melhores, simples, rápidos, para que sua empresa sempre fique anos à frente da concorrência!</h2>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="services-clouds"></div>
-        <div class="inner">
-            <p class="section-title">Serviços</p>
-            <div class="service-block">
-                <div class="service-text">
-                    <h2 class="service-title">Sistemas Personalizados</h2>
-                    <div class="service-description">
-                        <p>Se a sua empresa possuí necessidades únicas, nós podemos desenolver um sistema sob medida para as suas necessidades.</p>
-                        <p>Desenvolvemos desdes sistemas para <strong>Internet</strong> até <strong>desktop</strong> , passando por <strong>smartphones</strong> e <strong>tablets</strong>.</p>
-                        <p>Entre em contato e encontraremos a melhor solução para aumentar a produtividade e reduzir os custos operacionais da sua empresa.</p>
-                    </div>
-                </div>
-                <div class="service-image service-development"></div>
-            </div>
-            <div class="service-block right">
-                <div class="service-text">
-                    <h2 class="service-title">Consultoria</h2>
-                    <div class="service-description">
-                        <p>Com a rápida evolução das tecnologias web e diante de tantos concorrentes, o conhecimento e experiência nas novas tecnologias são <strong>diferenciais indispensáveis</strong> no portfólio de qualquer empresa que se preze.</p>
-                        <p>Também fornecemos informações suficientes para entender o ciclo de vida, níveis de produtividade, níveis de qualidade do software que está sendo produzido.</p>
-                    </div>
-                </div>
-
-                <div class="service-image service-consultancy"></div>
-            </div>
-            <div class="service-block">
-                <div class="service-text">
-                    <h2 class="service-title">Treinamentos</h2>
-                    <div class="service-description">
-                        <p>Fornecemos treinamentos corporativos para que sua empresa esteja preparada para esta nova geração de aplicações web que estamos vivenciando.</p>
-                        <p>Se sua empresa está lidando com um grande volume de informação e alta-concorrência, podemos treinar sua equipe em tecnologias como <strong>NodeJS</strong> e <strong>MongoDB</strong>.</p>
-                    </div>
-                </div>
-                <div class="service-image service-trainning"></div>
-            </div>
-        </div>
     </section>
 
     <section id="we" class="we">
@@ -110,59 +61,27 @@
             </div>
         </div>
     </section>
-
-    <section id="hiring" class="customers">
+    <section id="hiring" class="hiring">
         <div class="inner">
             <p class="hiring-text">Nossa equipe está em constante crescimento, se você é apaixonado por JavaScript, novas tecnologias e gosta de grandes desafios, você tem o perfil que nós procuramos!</p>
-            <p class="hiring-text">Envie seu currículo para vagas@digitalbits.com.br e entraremos em contato com você assim que possível!</p>
+            <p class="hiring-text">Envie seu currículo para <span class="text-highlight">vagas@digitalbits.com.br</span> e entraremos em contato com você assim que possível!</p>
         </div>
     </section>
-
-    <section id="contact" class="hiring">
+    <footer>
         <div class="inner">
-            <p class="section-title">Contato</p>
-
-            <form class="contact-form" method="POST" action="http://guilhermefarias.com.br/mail-digitalbits.php">
-                <ul>
-                    <li>
-                        <label class="first">Nome</label>
-                        <input name="name" type="text" class="input-text" required="required" />
-                    </li>
-                    <li>
-                        <label>Email para contato</label>
-                        <input name="email" type="text" class="input-text" required="required" />
-                    </li>
-                    <li>
-                        <label>Mensagem</label>
-                        <textarea name="message" class="input-textarea" required="required"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" class="contact-submit" value="Enviar" />
-                    </li>
-                </ul>
-            </form>
-            <p class="contact-text">
-                Se interessou pelos nossos serviços?
-                <br> Será um prazer contribuir para o sucesso da sua empresa, entre em contato conosco através do formulário ao lado!
-            </p>
-
-            <div class="contact-info">
-                <p class="contact-email">contato@digitalbits.com.br</p>
-                <p class="contact-address">Rio Mar Trade Center
+            <div class="footer-info">
+                <p class="footer-email">contato@digitalbits.com.br</p>
+                <p class="footer-address">Rio Mar Trade Center
                     <br>Av Republica Do Libano, 251, Torre C, Sala 908.
                     <br>Pina, Recife.<br> CEP: 51110-160</p>
             </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="inner">
             <div class="footer-facebook">
                 <div class="fb-like-box" data-href="https://www.facebook.com/digitalbitstech" data-width="500" data-height="238" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
             </div>
         </div>
-        <a href="https://plus.google.com/115024807318500671433" rel="publisher"></a>
+        <!-- <a href="https://plus.google.com/115024807318500671433" rel="publisher"></a> -->
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+        <script src="main.js"></script>
         <script>
         document.addEventListener("DOMContentLoaded", function(){
             var HEADER_OFFSET = 80;

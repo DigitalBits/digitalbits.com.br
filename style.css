@@ -9,18 +9,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: #f5f5f5;
-    font-family: 'Raleway', sans-serif;
-}
-
-body {
-    padding-top: 80px;
-    overflow-x: hidden;
+    font-family: 'SanText', sans-serif;
 }
 
 input,
 textarea {
     font-size: 14px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'SanText', sans-serif;
 }
 
 header,
@@ -51,7 +46,20 @@ ul {
 .section-title {
     font-size: 60px;
     text-align: center;
+    font-family: 'SanDisplay';
 }
+
+@font-face {
+    font-family: 'SanDisplay';
+    src: url('SanFranciscoDisplay-Ultralight.otf');
+}
+
+@font-face {
+    font-family: 'SanText';
+    src: url('SanFranciscoText-Light.otf');
+}
+
+
 /*-----------------------------------------*/
 /*                  HEADER                 */
 /*-----------------------------------------*/
@@ -60,50 +68,58 @@ header {
     top: 0;
     left: 0;
     z-index: 500;
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
     position: fixed;
-    background-position: center;
-    background-color: transparent;
-    background-image: url(img/header.png);
+    background-color: #fff;
+    box-shadow: 0 -3px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .header-logo {
-    width: 160px;
-    height: 98px;
-    margin-top: 3px;
+    width: 260px;
+    height: 80px;
     float: left;
-    padding-left: 100px;
-    font-weight: normal;
     background-repeat: no-repeat;
-    background-image: url(img/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-image: url(logo.png);
 }
 
 .header-nav {
     float: right;
+    font-size: 22px;
+    font-family: 'SanDisplay';
 }
 
 .header-link {
     cursor: pointer;
-    padding: 20px 10px;
+    height: 80px;
+    display: block;
+    float: left;
+    padding: 0 10px;
 }
+
+.header-link:hover {
+    background-color: #f5f5f5;
+}
+
+
 /*-----------------------------------------*/
-/*                  SLIDER                 */
+/*                 PARTICLE                */
 /*-----------------------------------------*/
 
 .slider {
-    height: 350px;
+    width: 100%;
+    height: 600px;
     position: relative;
-    background-color: #ccc;
-    animation-duration: 240s;
-    animation-name: moveCloud;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 240s;
-    -webkit-animation-name: moveCloud;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    background-image: url(img/cloud.jpg);
+    padding: 0;
+    background-color: #27ae60;
+    background: linear-gradient(62deg, #1e72d2, #2cc437);
+    background-size: 400% 400%;
+    -webkit-animation: change 80s ease infinite;
+    -moz-animation: change 80s ease infinite;
+    -o-animation: change 80s ease infinite;
+    animation: change 80s ease infinite;
 }
 
 .slider-clouds {
@@ -117,196 +133,60 @@ header {
     background-image: url(img/cloud-up.png);
 }
 
-.slider-techs {
-    width: 483px;
-    height: 126px;
-    margin: 50px auto 0;
-}
-
-.slider-tech {
-    width: 111px;
-    height: 126px;
-    float: left;
-    margin: 0 25px;
-    animation-duration: 2s;
-    animation-name: bounce;
-    animation-iteration-count: infinite;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-name: bounce;
-    -webkit-animation-iteration-count: infinite;
-    background-image: url(img/techs.png);
-}
-
-.slider-tech.angular {
-    background-position: 0 0;
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-}
-
-.slider-tech.node {
-    background-position: -117px 0;
-    animation-delay: 0.3s;
-    -webkit-animation-delay: 0.3s;
-}
-
-.slider-tech.html5 {
-    background-position: -233px 0;
-    animation-delay: 0.6s;
-    -webkit-animation-delay: 0.6s;
-}
-
-@keyframes moveCloud {
-    from {
-        background-position: 0 center;
-    }
-    to {
-        background-position: -2756px center;
-    }
-}
-
-@-webkit-keyframes moveCloud {
-    from {
-        background-position: 0 center;
-    }
-    to {
-        background-position: -2756px center;
-    }
-}
-
-@keyframes bounce {
-    0% {
-        margin-top: 0;
-    }
-    50% {
-        margin-top: 30px;
-    }
-    100% {
-        margin-top: 0;
-    }
-}
-
-@-webkit-keyframes bounce {
-    0% {
-        margin-top: 0;
-    }
-    50% {
-        margin-top: 30px;
-    }
-    100% {
-        margin-top: 0;
-    }
-}
-/*-----------------------------------------*/
-/*                TECNOLOGY                */
-/*-----------------------------------------*/
-
-.technology {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.technology h2 {
+.slider-text {
+    top: 260px;
+    width: 900px;
+    left: 50%;
+    line-height: 55px;
+    font-size: 40px;
+    font-weight: normal;
+    color: #fff;
+    margin-left: -450px;
     text-align: center;
-    font-weight: normal;
-}
-/*-----------------------------------------*/
-/*                 SERVICES                */
-/*-----------------------------------------*/
-
-.services {
-    color: #fff;
-    padding: 90px 0 0 0;
-    position: relative;
-    background-color: #27ae60;
-}
-
-.services .section-title {
-    text-align: left;
-}
-
-.services-clouds {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 50px;
     position: absolute;
-    background-size: auto 50px;
-    background-image: url(img/cloud-down.png);
+    font-family: 'SanDisplay';
 }
 
-.service-block {
+#particle-canvas {
     width: 100%;
-    float: left;
-    margin-top: 40px;
+    height: 600px;
+    opacity: 0.8 !important;
 }
 
-.service-text {
-    float: left;
-    width: 500px;
+#particle-canvas div {
+    background: none !important;
 }
 
-.service-title {
-    float: left;
-    width: 100%;
-    margin: 15px 0;
-    font-size: 26px;
-    font-weight: normal;
+@-webkit-keyframes change {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@-moz-keyframes change {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@-o-keyframes change {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
 }
 
-.service-description {
-    width: 100%;
-    float: left;
-    line-height: 22px;
-    color: #fff;
+@keyframes change {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
 }
 
-.service-description p {
-    margin: 5px 0;
-}
-
-.service-image {
-    float: right;
-}
-
-.service-block.right .service-text {
-    float: right;
-}
-
-.service-block.right .service-image {
-    float: left;
-}
-
-.service-development {
-    width: 489px;
-    height: 469px;
-    margin-top: -130px;
-    background-image: url(img/service-development.png);
-}
-
-.service-consultancy {
-    width: 453px;
-    height: 400px;
-    margin-top: -130px;
-    background-image: url(img/service-consultancy.png);
-}
-
-.service-trainning {
-    width: 476px;
-    height: 451px;
-    margin-top: -80px;
-    margin-bottom: -55px;
-    background-image: url(img/service-trainning.png);
-}
 /*-----------------------------------------*/
 /*                   WE                    */
 /*-----------------------------------------*/
 
 .we {
-    padding-top: 110px;
+    padding-top: 60px;
+    padding-bottom: 30px;
     background-color: #fff;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-image: url(img/bg-green-white.png);
 }
 
 .we-block {
@@ -346,124 +226,16 @@ header {
     line-height: 22px;
     text-align: center;
 }
-/*-----------------------------------------*/
-/*                CUSTOMERS                */
-/*-----------------------------------------*/
 
-.customers {
-    padding-top: 70px;
-    padding-top: 100px;
-    background-color: #f5f5f5;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-image: url(img/bg-white-gray.png);
-}
-
-.customers .inner {
-    position: relative;
-}
-
-.customers-left {
-    top: -100px;
-    left: -400px;
-    width: 408px;
-    height: 573px;
-    position: absolute;
-    background-image: url(img/customers-left.png);
-}
-
-.customers-right {
-    top: -100px;
-    right: -370px;
-    width: 371px;
-    height: 519px;
-    position: absolute;
-    background-image: url(img/customers-right.png);
-}
-
-.customer-list {
-    width: 1010px;
-    margin-top: 40px;
-    margin-left: -5px;
-}
-
-.customer-block {
-    padding-bottom: 30px;
-}
-
-.customer-pagination {
-    bottom: 0 !important;
-}
-
-.customer {
-    float: left;
-    width: 158px;
-    height: 100px;
-    margin: 5px;
-    opacity: 0.5;
-    border-radius: 5px;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid #ddd;
-    -webkit-transition: box-shadow 0.2s linear;
-    -o-transition: box-shadow 0.2s linear;
-    transition: box-shadow 0.2s linear;
-}
-
-.customer:hover {
-    box-shadow: 0 0 5px 0.1px rgba(0, 0, 0, 0.7);
-}
-
-.customer.prevplan {
-    background-image: url(img/customers/prevplan.png);
-}
-
-.customer.chama {
-    background-image: url(img/customers/chama.png);
-}
-
-.customer.renoveja {
-    background-image: url(img/customers/renoveja.png);
-}
-
-.customer.agenciacloud {
-    background-image: url(img/customers/agenciacloud.png);
-}
-
-.customer.zenit {
-    background-image: url(img/customers/zenit.png);
-}
-
-.customer.bringlead {
-    background-image: url(img/customers/bringlead.png);
-}
-
-.customer.col {
-    background-image: url(img/customers/col.png);
-}
-
-.customer.workplus {
-    background-image: url(img/customers/workplus.png);
-}
-
-.customer.impar {
-    background-image: url(img/customers/impar.png);
-}
-
-.customer.fianseg {
-    background-image: url(img/customers/fianseg.png);
-}
 /*-----------------------------------------*/
 /*                  HIRING                 */
 /*-----------------------------------------*/
 
 .hiring {
-    padding-top: 110px;
-    background-color: #fff;
-    background-position: top center;
+    padding-top: 80px;
+    padding-bottom: 20px;
     background-repeat: no-repeat;
-    background-image: url(img/bg-gray-white.png);
+    background-image: url(img/bg-white-gray.png);
 }
 
 .hiring-text {
@@ -472,103 +244,14 @@ header {
     margin: 10px 0;
     text-align: center;
 }
-/*-----------------------------------------*/
-/*                 CONTACT                 */
-/*-----------------------------------------*/
 
-.contact {
-    padding-top: 70px;
-    background-color: #f5f5f5;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-image: url(img/bg-white-gray.png);
+.text-highlight {
+    color: #1e72d2;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2cc437;
 }
 
-.contact .section-title {
-    color: #555;
-    text-align: left;
-}
 
-.contact-form {
-    float: left;
-    width: 450px;
-    height: 325px;
-    margin-top: 60px;
-    padding-right: 25px;
-    border-right: 1px solid #e0e0e0;
-}
-
-.contact-form label {
-    display: block;
-    margin: 20px 0 5px;
-}
-
-.contact-form label.first {
-    margin-top: -25px;
-}
-
-.input-text,
-.input-textarea {
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    line-height: 30px;
-    font-size: 14px;
-    border-radius: 3px;
-    border: 1px solid #e0e0e0;
-}
-
-.input-textarea {
-    resize: none;
-    height: 120px;
-    line-height: 20px;
-}
-
-.contact-text {
-    float: right;
-    width: 500px;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.contact-submit {
-    float: right;
-    cursor: pointer;
-    color: #fff;
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-    background-color: #7FB249;
-    border: 1px solid #67913B;
-}
-
-.contact-info {
-    float: right;
-    width: 525px;
-    font-size: 16px;
-    margin-top: 40px;
-    padding-top: 30px;
-    padding-left: 70px;
-    border-top: 1px solid #e0e0e0;
-}
-
-.contact-email,
-.contact-address {
-    float: left;
-    line-height: 24px;
-    padding: 10px 0 10px 40px;
-    background-repeat: no-repeat;
-    background-position: left center;
-}
-
-.contact-email {
-    background-image: url(img/icon-email.png);
-}
-
-.contact-address {
-    background-image: url(img/icon-local.png);
-}
 /*-----------------------------------------*/
 /*                  FOOTER                 */
 /*-----------------------------------------*/
@@ -576,112 +259,41 @@ header {
 footer {
     height: 300px;
     background-color: #333;
-    background-position: top center;
     background-repeat: no-repeat;
-    /*background-image: url(img/bg-footer.png);*/
+    background-image: url(img/bg-footer.png);
 }
 
 footer .inner {
     position: relative;
 }
 
-.footer-lighthouse {
-    color: #ccc;
+.footer-info {
+    width: 450px;
     float: left;
-    width: 380px;
-    height: 275px;
-    line-height: 22px;
-    margin-top: 25px;
-    padding-top: 50px;
-    padding-left: 100px;
-    position: absolute;
-    text-align: center;
+    color: #ddd;
+    margin-top: 80px;
+}
+
+.footer-email,
+.footer-address {
+    float: left;
+    line-height: 24px;
+    padding: 10px 0 10px 40px;
     background-repeat: no-repeat;
-    background-image: url(img/bg-footer-lighthouse.png);
+    background-position: left center;
+}
+
+.footer-email {
+    background-image: url(img/icon-email.png);
+}
+
+.footer-address {
+    background-image: url(img/icon-local.png);
 }
 
 .footer-facebook {
     float: right;
     width: 500px;
-    margin-top: 50px;
+    margin-top: 65px;
     background-color: #ccc;
-}
-
-/*-----------------------------------------*/
-/*          TABLET MEDIA QUERY             */
-/*-----------------------------------------*/
-
-@media (max-width: 800px) {
-
-    .service-text {
-        width: 100%;
-        float: left !important;
-    }
-
-    .inner,
-    .footer-lighthouse {
-        width: 90%;
-    }
-
-    .we-block {
-        width: 100%;
-    }
-
-    .contact-form {
-        width: 100%;
-        padding-right: 0;
-        border: none;
-    }
-
-    .contact-text {
-        width: 100%;
-    }
-
-    .contact-info {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .contact-info p {
-        width: 100%;
-        display: block;
-    }
-
-    #hiring,
-    #customers,
-    .header-nav,
-    .service-image,
-    .footer-facebook {
-        display: none;
-    }
-}
-
-
-/*-----------------------------------------*/
-/*         SMARTPHONE MEDIA QUERY          */
-/*-----------------------------------------*/
-
-@media (max-width: 400px) {
-    .slider-techs {
-        width: 300px;
-    }
-
-    .slider-tech {
-        width: 90px;
-        height: 97px;
-        margin: 0 5px;
-        background-size: cover;
-    }
-
-    .slider-tech.node {
-        background-position: -87px 0px;
-    }
-
-    .slider-tech.html5 {
-        background-position: -175px 0px;
-    }
-
-    .section-title {
-        font-size: 40px;
-    }
 }
