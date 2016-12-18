@@ -196,22 +196,12 @@ header {
 }
 
 .we-thumb {
-    width: 128px;
-    height: 128px;
-    margin: 0 auto;
     opacity: 0.5;
-}
-
-.we-thumb.mission {
-    background-image: url(img/we-mission.png);
-}
-
-.we-thumb.vision {
-    background-image: url(img/we-vision.png);
-}
-
-.we-thumb.values {
-    background-image: url(img/we-values.png);
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .we-title {
@@ -222,7 +212,7 @@ header {
 }
 
 .we-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     text-align: center;
 }
