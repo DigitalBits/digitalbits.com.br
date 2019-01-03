@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #232a30;
+      }
+    </style>
+  </defs>
+  <path id="ic_arrow" class="cls-1" d="M22,12,18,8v3H8v2H18v3Z" transform="translate(-8 -8)"/>
+</svg>

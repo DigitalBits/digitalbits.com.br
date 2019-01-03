@@ -1,0 +1,50 @@
+// colors
+@branco: #FFFFFF;
+@preto: #000000;
+
+body {
+  background-color: #232A30;
+  background-image: url('../images/base/bg-line.svg');
+  background-repeat: no-repeat;
+  background-position: 101% 0;
+  background-size: 670px;
+  font-family: 'Ropa Sans', sans-serif;
+  color: #fff;
+}
+
+// fonts
+.ropa(@x){font:@x 'Ropa Sans', sans-serif;}
+
+// diretorios
+@bg:'../images/bg/';
+@misc:'../images/misc/';
+@temp:'../images/temp/';
+.bg(@x,@y){background:url('@{bg}@{x}') @y;}
+.misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.temp(@x,@y){background:url('@{temp}@{x}') @y;}
+
+
+// globals
+
+hr {
+  float: left;
+  width: 100%;
+  margin: 10px 0 25px 0;
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, .12);
+}
+
+@hover: ~"only screen and (min-width: 1200px)";
+@responsive: ~"only screen and (max-width: 1199px)";
+@desktop: ~"(min-width: 993px) and (max-width: 1199px)";
+@tablet: ~"only screen and (max-width: 992px)";
+@mobile: ~"only screen and (max-width: 767px)";
+
+
+@media @mobile {
+  body {
+    background-size: 270px;
+    background-position: 221% 0;
+  }
+}

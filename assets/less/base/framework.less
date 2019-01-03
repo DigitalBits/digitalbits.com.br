@@ -1,0 +1,69 @@
+.opac(@x) {
+  @ie: @x * 100;
+  opacity: @x;
+  filter: alpha(opacity=@ie);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@ie)";
+}
+
+.disabled {
+  .opac(.5);
+  pointer-events: none;
+  cursor: default;
+}
+
+//transições
+.transition(@x) {
+  -webkit-transition: All @x ease-in-out;
+  -moz-transition: All @x ease-in-out;
+  -o-transition: All @x ease-in-out;
+  transition: All @x ease-in-out;
+}
+
+.transform(@x) {
+  -webkit-transform: @x;
+  -moz-transform: @x;
+  -o-transform: @x;
+  transform: @x;
+}
+
+.transform-origin(@x) {
+  -webkit-transform-origin: @x;
+  -moz-transform-origin: @x;
+  -o-transform-origin: @x;
+  transform-origin: @x;
+}
+
+.transitiondelay(@x) {
+  -webkit-transition-delay: @x;
+  -moz-transition-delay: @x;
+  -o-transition-delay: @x;
+  transition-delay: @x;
+}
+
+.placeholder(@x) {
+  &::-webkit-input-placeholder {
+    color: @x;
+    opacity: 1;
+  }
+  &:-moz-placeholder {
+    color: @x;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: @x;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: @x;
+    opacity: 1;
+  }
+}
+
+.poscenter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

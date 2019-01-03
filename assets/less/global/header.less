@@ -1,0 +1,53 @@
+.header {
+  float: left;
+  width: 100%;
+  margin-top: 32px;
+  float: left;
+  width: 100%;
+
+  &__logo {
+    width: 174px;
+
+    a {
+      background: url('../images/base/digital-bits.svg') top left no-repeat;
+      position: relative;
+      display: inline-block;
+      text-indent: -99999px;
+      float: left;
+      width: 174px;
+      height: 42px;
+    }
+  }
+
+  &__nav {
+    float: right;
+    margin-top: 12px;
+
+    &__item {
+      float: left;
+      font-size: 16px;
+      margin-left: 40px;
+
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+@media @tablet {
+  .header__nav {
+    display: none;
+  }
+}
+
+@media @mobile {
+  .header {
+    margin-top: 40px;
+
+    &__logo {
+      width: 32px;
+      overflow: hidden;
+    }
+  }
+}
