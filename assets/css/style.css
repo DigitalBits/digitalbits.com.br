@@ -1,0 +1,138 @@
+
+/*
+Theme Name: DigitalBits2019
+Theme URI:  http:/www.digitalbits.com.br
+Description: Quinta Versão - v2019
+Author: Guilherme Farias
+Author URI: http://www.digitalbits.com.br
+Version: 5.0
+*/
+
+
+/*
+---------------------------------------------------------------
+------------------------ Guiky Reset --------------------------
+---------------------------------------------------------------
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #232a30;
+}
+
+body {
+    padding-top: 106px;
+    background-color: #232A30;
+    background-image: url(../svg/bg-line.svg);
+    background-repeat: no-repeat;
+    background-position: 101% 0;
+    background-size: 670px;
+    font-family: 'Ropa Sans',sans-serif;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*
+---------------------------------------------------------------
+-------------------------- Header -----------------------------
+---------------------------------------------------------------
+*/
+
+header {
+    top: 0;
+    width: 100%;
+    height: 75px;
+    padding: 16px 0;
+    z-index: 100;
+    position: fixed;
+    background-color: #232a30;
+    transition: all linear 0.1s;
+    border-bottom: 1px solid #1f2327;
+}
+
+header.top {
+    transform: translateY(16px);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.header-logo {
+    background: url(../svg/digitalbits.svg) top left no-repeat;
+    text-indent: -99999px;
+    float: left;
+    width: 174px;
+    height: 42px;
+}
+
+header nav {
+    float: right;
+    line-height: 42px;
+}
+
+header nav li {
+    float: left;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 8px;
+    margin-left: 24px;
+}
+
+/*
+---------------------------------------------------------------
+-------------------------- Section ----------------------------
+---------------------------------------------------------------
+*/
+
+section {
+    width: 100%;
+    height: 400px;
+    padding: 50px 0;
+}
+
+.section-title {
+}
+
+/* -------------------------- Banner ---------------------------- */
+
+.banner-text {
+    font-size: 40px;
+    line-height: 52px;
+    width: 600px;
+    padding-left: 50px;
+}
+
+/* -------------------------- RH ---------------------------- */
+
+/* -------------------------- Contact ---------------------------- */
+
+
+
+/*
+---------------------------------------------------------------
+--------------------------- Footer ----------------------------
+---------------------------------------------------------------
+*/
