@@ -18,7 +18,7 @@ Version: 5.0
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
@@ -81,11 +81,12 @@ header.top {
 }
 
 .header-logo {
-    background: url(../svg/digitalbits.svg) top left no-repeat;
-    text-indent: -99999px;
+    display: block;
     float: left;
     width: 174px;
     height: 42px;
+    text-indent: -99999px;
+    background: url(../svg/digitalbits.svg) top left no-repeat;
 }
 
 header nav {
@@ -109,11 +110,7 @@ header nav li {
 
 section {
     width: 100%;
-    height: 400px;
     padding: 50px 0;
-}
-
-.section-title {
 }
 
 /* -------------------------- Banner ---------------------------- */
@@ -125,14 +122,202 @@ section {
     padding-left: 50px;
 }
 
-/* -------------------------- RH ---------------------------- */
+/* -------------------------- Knowledge ---------------------------- */
+
+.knowlegde-areas {
+    width: 450px;
+    float: left;
+    position: relative;
+}
+
+.knowlegde-area {
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #16d592;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.knowlegde-area.business {
+    top: 50px;
+    left: 185px;
+}
+
+.knowlegde-area.ux {
+    top: 30px;
+    left: 10px;
+}
+
+.knowlegde-area.tech {
+    top: 190px;
+    left: 76px;
+}
+
+.knowlegde-text {
+    width: 530px;
+    float: right;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.knowlegde-text h2 {
+    color: #16d592;
+    font-size: 24px;
+    line-height: 40px;
+    text-indent: -80px;
+}
+
+.knowlegde-text p {
+    margin: 8px 0;
+    line-height: 24px;
+}
+
+/* -------------------------- Carrer ---------------------------- */
+
+#culture {
+    height: 800px;
+    background-image: url(../svg/bg-line-left.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 670px;
+}
+
+/* -------------------------- Carrer ---------------------------- */
+
+#carrer {
+    color: #232a30;
+    background-color: #fff;
+}
+
+#carrer h2 {
+    font-size: 30px;
+}
+
+.carrer-text {
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.carrer-job {
+    width: 317px;
+    float: left;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.carrer-job:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.carrer-job-title {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 16px;
+    border: 1px solid #eee;
+    background-color: #f5f5f5;
+}
+
+.carrer-job-local {
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    float: right;
+    border-radius: 3px;
+    margin-top: -2px;
+    margin-right: -8px;
+    background-color: #ccc;
+    text-transform: uppercase;
+    padding: 0 8px;
+}
+
+.carrer-job-local.c1 {
+    background-color: #27ae60;
+}
+
+.carrer-job-local.c2 {
+    background-color: #f1c40f;
+}
+
+.carrer-job-local.c3 {
+    background-color: #8e44ad;
+}
+
+.carrer-job-local.c4 {
+    background-color: #e74c3c;
+}
+
+.carrer-job-local.c5 {
+    background-color: #f39c12;
+}
+
+.carrer-job-local.c6 {
+    background-color: #2c3e50;
+}
+
+.carrer-job-local.c7 {
+    background-color: #2980b9;
+}
+
 
 /* -------------------------- Contact ---------------------------- */
 
 
+#contact {
+    background-color: #fff;
+}
 
 /*
 ---------------------------------------------------------------
 --------------------------- Footer ----------------------------
 ---------------------------------------------------------------
 */
+
+footer {
+    padding: 24px 0;
+}
+
+footer .inner {
+    position: relative;
+}
+
+.footer-info {
+    width: 450px;
+    float: left;
+    color: #ddd;
+}
+
+.footer-row {
+    float: left;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    padding: 8px 0 8px 50px;
+}
+
+
+.footer-row.last {
+    color: #16d592;
+    font-weight: normal;
+}
+
+.footer-icon {
+    float: left;
+    display: block;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    margin-left: -50px;
+}
+
+.footer-facebook {
+    float: right;
+    width: 500px;
+    background-color: #ccc;
+}
+
