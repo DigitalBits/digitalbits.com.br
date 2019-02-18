@@ -33,7 +33,7 @@ body {
     background-color: #232A30;
     background-image: url(../svg/bg-line.svg);
     background-repeat: no-repeat;
-    background-position: 101% 0;
+    background-position: 101% -3px;
     background-size: 670px;
     font-family: 'Ropa Sans',sans-serif;
     color: #fff;
@@ -170,6 +170,7 @@ section {
     font-size: 24px;
     line-height: 40px;
     text-indent: -80px;
+    font-weight: normal;
 }
 
 .knowlegde-text p {
@@ -183,7 +184,7 @@ section {
     height: 800px;
     background-image: url(../svg/bg-line-left.svg);
     background-repeat: no-repeat;
-    background-position: left bottom;
+    background-position: -3px bottom;
     background-size: 670px;
 }
 
@@ -194,14 +195,50 @@ section {
     background-color: #fff;
 }
 
-#carrer h2 {
+.carrer-title {
     font-size: 30px;
+    font-weight: normal;
+}
+
+.carrer-subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 8px 0;
 }
 
 .carrer-text {
     margin: 8px 0;
     font-size: 18px;
     line-height: 24px;
+    width: 60%;
+    float: left;
+}
+
+.carrer-job-free {
+    width: 350px;
+    float: right;
+    border: 1px solid #cacaca;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.carrer-job-free p {
+    margin: 5px;
+}
+
+.carrer-job-button {
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+    margin: 8px auto;
+    color: #16d592;
+    background-color: #232a30;
+    border: 1px solid #16d592;
 }
 
 .carrer-job {
