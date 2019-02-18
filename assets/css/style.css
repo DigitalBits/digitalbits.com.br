@@ -1,0 +1,360 @@
+
+/*
+Theme Name: DigitalBits2019
+Theme URI:  http:/www.digitalbits.com.br
+Description: Quinta Versão - v2019
+Author: Guilherme Farias
+Author URI: http://www.digitalbits.com.br
+Version: 5.0
+*/
+
+
+/*
+---------------------------------------------------------------
+------------------------ Guiky Reset --------------------------
+---------------------------------------------------------------
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #232a30;
+}
+
+body {
+    padding-top: 106px;
+    background-color: #232A30;
+    background-image: url(../svg/bg-line.svg);
+    background-repeat: no-repeat;
+    background-position: 101% -3px;
+    background-size: 670px;
+    font-family: 'Ropa Sans',sans-serif;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*
+---------------------------------------------------------------
+-------------------------- Header -----------------------------
+---------------------------------------------------------------
+*/
+
+header {
+    top: 0;
+    width: 100%;
+    height: 75px;
+    padding: 16px 0;
+    z-index: 100;
+    position: fixed;
+    background-color: #232a30;
+    transition: all linear 0.1s;
+    border-bottom: 1px solid #1f2327;
+}
+
+header.top {
+    transform: translateY(16px);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.header-logo {
+    display: block;
+    float: left;
+    width: 174px;
+    height: 42px;
+    text-indent: -99999px;
+    background: url(../svg/digitalbits.svg) top left no-repeat;
+}
+
+header nav {
+    float: right;
+    line-height: 42px;
+}
+
+header nav li {
+    float: left;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 8px;
+    margin-left: 24px;
+}
+
+/*
+---------------------------------------------------------------
+-------------------------- Section ----------------------------
+---------------------------------------------------------------
+*/
+
+section {
+    width: 100%;
+    padding: 50px 0;
+}
+
+/* -------------------------- Banner ---------------------------- */
+
+.banner-text {
+    font-size: 40px;
+    line-height: 52px;
+    width: 600px;
+    padding-left: 50px;
+}
+
+/* -------------------------- Knowledge ---------------------------- */
+
+.knowlegde-areas {
+    width: 450px;
+    float: left;
+    position: relative;
+}
+
+.knowlegde-area {
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #16d592;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.knowlegde-area.business {
+    top: 50px;
+    left: 185px;
+}
+
+.knowlegde-area.ux {
+    top: 30px;
+    left: 10px;
+}
+
+.knowlegde-area.tech {
+    top: 190px;
+    left: 76px;
+}
+
+.knowlegde-text {
+    width: 530px;
+    float: right;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.knowlegde-text h2 {
+    color: #16d592;
+    font-size: 24px;
+    line-height: 40px;
+    text-indent: -80px;
+    font-weight: normal;
+}
+
+.knowlegde-text p {
+    margin: 8px 0;
+    line-height: 24px;
+}
+
+/* -------------------------- Carrer ---------------------------- */
+
+#culture {
+    height: 800px;
+    background-image: url(../svg/bg-line-left.svg);
+    background-repeat: no-repeat;
+    background-position: -3px bottom;
+    background-size: 670px;
+}
+
+/* -------------------------- Carrer ---------------------------- */
+
+#carrer {
+    color: #232a30;
+    background-color: #fff;
+}
+
+.carrer-title {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.carrer-subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.carrer-text {
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 24px;
+    width: 60%;
+    float: left;
+}
+
+.carrer-job-free {
+    width: 350px;
+    float: right;
+    border: 1px solid #cacaca;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.carrer-job-free p {
+    margin: 5px;
+}
+
+.carrer-job-button {
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+    margin: 8px auto;
+    color: #16d592;
+    background-color: #232a30;
+    border: 1px solid #16d592;
+}
+
+.carrer-job {
+    width: 317px;
+    float: left;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.carrer-job:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.carrer-job-title {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 16px;
+    border: 1px solid #eee;
+    background-color: #f5f5f5;
+}
+
+.carrer-job-local {
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    float: right;
+    border-radius: 3px;
+    margin-top: -2px;
+    margin-right: -8px;
+    background-color: #ccc;
+    text-transform: uppercase;
+    padding: 0 8px;
+}
+
+.carrer-job-local.c1 {
+    background-color: #27ae60;
+}
+
+.carrer-job-local.c2 {
+    background-color: #f1c40f;
+}
+
+.carrer-job-local.c3 {
+    background-color: #8e44ad;
+}
+
+.carrer-job-local.c4 {
+    background-color: #e74c3c;
+}
+
+.carrer-job-local.c5 {
+    background-color: #f39c12;
+}
+
+.carrer-job-local.c6 {
+    background-color: #2c3e50;
+}
+
+.carrer-job-local.c7 {
+    background-color: #2980b9;
+}
+
+
+/* -------------------------- Contact ---------------------------- */
+
+
+#contact {
+    background-color: #fff;
+}
+
+/*
+---------------------------------------------------------------
+--------------------------- Footer ----------------------------
+---------------------------------------------------------------
+*/
+
+footer {
+    padding: 24px 0;
+}
+
+footer .inner {
+    position: relative;
+}
+
+.footer-info {
+    width: 450px;
+    float: left;
+    color: #ddd;
+}
+
+.footer-row {
+    float: left;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    padding: 8px 0 8px 50px;
+}
+
+
+.footer-row.last {
+    color: #16d592;
+    font-weight: normal;
+}
+
+.footer-icon {
+    float: left;
+    display: block;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    margin-left: -50px;
+}
+
+.footer-facebook {
+    float: right;
+    width: 500px;
+    background-color: #ccc;
+}
+
