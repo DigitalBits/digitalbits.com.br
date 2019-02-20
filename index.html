@@ -74,6 +74,36 @@
             <div class="clearfix"></div>
         </div>
     </section>
+    <div class="modal-overlay" onClick="closeModal()">
+        <div class="modal-shadow"></div>
+        <div class="modal">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+            <div class="modal-title"></div>
+            <div class="modal-description"></div>
+            <form class="modal-form">
+                <div class="modal-form-title">Quero fazer parte!</div>
+                <div>
+                    <label>Seu Nome</label>
+                    <input type="text" name="name" class="input-text" required />
+                </div>
+                <div>
+                    <label>E-mail para contato</label>
+                    <input type="email" name="email" class="input-text" required />
+                </div>
+                <div>
+                    <label>Sobre Você</label>
+                    <textarea class="input-textarea" name="message" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" class="button" value="Enviar" />
+                    <a class="button">Anexar CV</a>
+                </div>
+            </form>
+        </div>
+    </div>
     <section id="carrer">
         <div class="inner">
             <h2 class="carrer-title">A DigitalBits está crescendo</h2>
@@ -88,49 +118,49 @@
             <div class="clearfix"></div>
             <h3 class="carrer-subtitle m-b-0">Vagas Disponíveis:</h3>
             <div class="carrer-jobs">
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('BUSINESS-1')">
                     <div class="carrer-job-title">Analista de Négocios <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('TESTER-1')">
                     <div class="carrer-job-title">Analista de Testes <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('PRODUCT-MANAGER-1')">
                     <div class="carrer-job-title">Gerente de Produtos <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('CUSTOMER-SUCCESS-1')">
                     <div class="carrer-job-title">Customer Success <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('SUPPORT-1')">
                     <div class="carrer-job-title">Suporte <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('FULLSTACK-1')">
                     <div class="carrer-job-title">FullStack Developer <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('FRONTEND-1')">
                     <div class="carrer-job-title">Front-End Developer <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('BACKEND-1')">
                     <div class="carrer-job-title">Back-End Developer <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-REC-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-BSB-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c2">Brasilia</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-FOR-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c3">Fortaleza</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-SP-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c4">São Paulo</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-RJ-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c5">Rio de Janeiro</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-SSA-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c6">Salvador</div></div>
                 </div>
-                <div class="carrer-job">
+                <div class="carrer-job" onClick="openModal('OPERATION-POA-1')">
                     <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c7">Porto Alegre</div></div>
                 </div>
                 <div class="clearfix"></div>
@@ -154,7 +184,7 @@
                 <h2>Somos especialistas em Produtos Digitais!</h2>
                 <p>Para criar um bom software é preciso muito mais que apenas desenvolver o maior numéro de funcionalidades possivel, a Industria de TI tem um cemitério lotado "produtos completos".</p>
                 <p>Acreditamos que um profundo desenvolvimento e entendimento da tríade: Négocios, Experiência do Usuário e Tecnologia, contribúi sigficativamente para a criação de produtos de sucesso e sua logenvidade em um mercado cada vez mais inovador e competitivo.</p>
-                <p>A DigitalBits surgiu em 2014 focada em criar software sob-medida para empresas, foi pioneira no uso da tecnologia NodeJS no Brasil. Após desenvolver software para clientes em RJ, SP, PR e PE, passou a focar apenas no desenvolvimento de Produtos Digitais no modelo Software as Service.</p>
+                <p>A DigitalBits surgiu em 2014 focada em criar software sob-medida para empresas, foi pioneira no uso massivo da tecnologia NodeJS no Brasil. Após desenvolver software para clientes em RJ, SP, PR e PE, passou a focar apenas no desenvolvimento de Produtos Digitais no modelo Software as Service.</p>
                 <p>Hoje, nossa principal missão é revolucionar a maneira como as clínicas e consultórios médicos operam no Brasil, com inovação, automação e aumento produtividade de todas suas rotinas da agenda médica à contabilidade.</p>
                 <p>Nosso maior desafio em 2019 é estruturar uma equipe que esteja a altura do nosso ambicioso projeto, estamos em uma busca constante por talentos!</p>
             </div>
@@ -250,6 +280,7 @@
         </script>
         <div class="clearfix"></div>
     </footer>
+    <script src="assets/js/carrer.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

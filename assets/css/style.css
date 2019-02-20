@@ -40,6 +40,11 @@ body {
     color: #fff;
 }
 
+input,
+textarea {
+    font-family: 'Ropa Sans',sans-serif;
+}
+
 ul {
     list-style: none;
 }
@@ -199,6 +204,167 @@ section {
     line-height: 22px;
 }
 
+/* -------------------------- Modal ---------------------------- */
+
+.modal-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-overlay.show {
+    display: block;
+}
+
+.modal-shadow {
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 500px;
+    z-index: 1100;
+    margin-top: -250px;
+    margin-left: -400px;
+    position: absolute;
+    box-shadow: 0 0 250px 80px #000;
+}
+
+.modal {
+    background-color: #232a30;
+    width: 1000px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -500px;
+    position: absolute;
+    padding: 50px;
+    z-index: 1200;
+    border: 1px solid #16d592;
+}
+
+.modal strong {
+    color: #16d592;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 24px;
+    display: block;
+}
+
+.modal-title {
+    color: #16d592;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.modal-description {
+    width: 500px;
+    float: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.modal-description p,
+.modal-description ul {
+    margin: 8px 0;
+}
+
+.modal-description li::before {
+    height: 6px;
+    width: 6px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    content: " ";
+    float: left;
+    display: block;
+    background-color: #16d592;
+}
+
+.modal-form  {
+    float: right;
+    width: 350px;
+    position: relative;
+    padding-left: 40px;
+    border-left: 1px solid #555;
+}
+
+.modal-form div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-form label {
+    color: #16d592;
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+    text-transform: uppercase;
+}
+
+.modal-form-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+.modal-form .input-text,
+.modal-form .input-textarea {
+    width: 100%;
+    color: #fff;
+    height: 34px;
+    font-size: 16px;
+    padding-left: 10px;
+    background-color: #232a30;
+    border: 1px solid #aaa;
+    border-radius: 1px;
+}
+
+.modal-form .input-text:focus,
+.modal-form .input-textarea:focus {
+    border-color: #16d592;
+}
+
+.modal-form .input-text:invalid,
+.modal-form .input-textarea:invalid {
+  box-shadow: none;
+}
+
+.modal-form .input-textarea {
+    height: 100px;
+    resize:none;
+    padding: 6px 10px;
+}
+
+.modal-form a.button {
+    float: left;
+}
+
+.modal-form .button {
+    cursor: pointer;
+    color: #fff;
+    float: right;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #aaa;
+    text-transform: uppercase;
+    background-color: #232a30;
+}
+
+.modal-form .button:hover {
+    color: #16d592;
+    border-color: #16d592;
+}
+
 /* -------------------------- Carrer ---------------------------- */
 
 #carrer {
@@ -271,6 +437,7 @@ section {
     float: left;
     margin-right: 24px;
     margin-top: 24px;
+    cursor: pointer;
 }
 
 .carrer-job:nth-child(3n+3) {
@@ -543,6 +710,74 @@ section {
     background-color: #232a30;
 }
 
+/* -------------------------- Loading ---------------------------- */
+
+.spinner {
+    display: none;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cube1,
+.cube2 {
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #16d592;
+    -webkit-animation: sk-cubemove 1.2s infinite ease-in-out;
+    animation: sk-cubemove 1.2s infinite ease-in-out;
+}
+
+.cube2 {
+    animation-delay: -0.6s;
+    -webkit-animation-delay: -0.6s;
+}
+
+@-webkit-keyframes sk-cubemove {
+    25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+    50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+    75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+    100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes sk-cubemove {
+    25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5);
+        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    } 50% {
+        transform: translateX(42px) translateY(42px) rotate(-179deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    } 50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    } 75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    } 100% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+/* -------------------------- Modal Loading ---------------------------- */
+
+.modal-overlay.loading .modal * {
+    display: none;
+}
+
+.modal-overlay.loading .modal .cube1,
+.modal-overlay.loading .modal .cube2,
+.modal-overlay.loading .modal .spinner {
+    display: block !important;
+}
+
+.modal-overlay.loading .modal .spinner {
+    margin-top: 280px;
+}
 
 /*
 ---------------------------------------------------------------

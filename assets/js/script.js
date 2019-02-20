@@ -1,6 +1,7 @@
 function init() {
 	var isTop = false;
 	var lastCheck;
+	var timeoutId;
 
 	function scollCheck() {
 		if (window.pageYOffset === lastCheck) {
@@ -30,6 +31,23 @@ function init() {
 		}
 	}
 
+	function openModal(key) {
+		clearTimeout(timeoutId);
+		document.querySelector('.modal-overlay').classList.add('loading');
+		document.querySelector('.modal-title').innerText = window.carrers[key].title;
+		document.querySelector('.modal-description').innerText = window.carrers[key].text;
+		document.querySelector('.modal-overlay').classList.add('show');
+		timeoutId = setTimeout(function() {
+			document.querySelector('.modal-overlay').classList.remove('loading');
+		}, 800);
+	}
+
+	function closeModal() {
+		document.querySelector('.modal-overlay').classList.remove('show');
+	}
+
+	window.openModal = openModal;
+	window.closeModal = closeModal;
 	setInterval(scollCheck, 200);
 	scollCheck();
 }
