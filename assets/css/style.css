@@ -30,6 +30,7 @@ body {
 }
 
 body {
+    scroll-behavior: smooth;
     padding-top: 106px;
     background-color: #232A30;
     background-image: url(../svg/bg-line.svg);
@@ -112,6 +113,10 @@ header nav li {
     margin-left: 24px;
 }
 
+header nav li:hover {
+    color: #16d592;
+}
+
 /*
 ---------------------------------------------------------------
 -------------------------- Section ----------------------------
@@ -148,7 +153,6 @@ section {
     float: left;
     position: relative;
     margin-bottom: 100px;
-    background-color: red;
 }
 
 

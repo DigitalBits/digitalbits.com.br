@@ -3,6 +3,10 @@ function init() {
 	var lastCheck;
 	var timeoutId;
 
+	window.goTo = function(id) {
+		window.scrollTo(0, document.querySelector('#' + id).offsetTop - 50);
+	}
+
 	function scollCheck() {
 		if (window.pageYOffset === lastCheck) {
 			return;
@@ -46,6 +50,7 @@ function init() {
 		document.querySelector('.modal-overlay').classList.remove('show');
 	}
 
+	window.goTo = goTo;
 	window.openModal = openModal;
 	window.closeModal = closeModal;
 	setInterval(scollCheck, 200);
