@@ -58,7 +58,7 @@ function init() {
 	function sendEmail(type, mailUrl, formData, formElement) {
 		var submitRequest = new XMLHttpRequest();
 
-		submitRequest.open('POST','https://guilhermefarias.com.br/' + type);
+		submitRequest.open('POST','https://guilhermefarias.com.br/' + mailUrl);
 		submitRequest.onreadystatechange = function() {
 			if (submitRequest.readyState === 4 && submitRequest.status === 200 && submitRequest.responseText === 'OK'){
 				displayAndRemoveResponse(formElement, 'Mensagem enviada com sucesso!', 'resp');
