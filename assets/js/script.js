@@ -65,10 +65,10 @@ function init() {
 		submitRequest.open('POST','https://guilhermefarias.com.br/' + mailUrl);
 		submitRequest.onreadystatechange = function() {
 			if (submitRequest.readyState === 4 && submitRequest.status === 200 && submitRequest.responseText === 'OK'){
-				displayAndRemoveResponse(formElement, 'Mensagem enviada com sucesso!', 'resp');
+				displayAndRemoveResponse(formElement, 'Mensagem enviada com sucesso!');
 				resetFields(formElement, type);
 			} else if (submitRequest.readyState === 4) {
-				displayAndRemoveResponse(formElement, 'Houve um erro ao enviar a mensagem', 'resp error');
+				displayAndRemoveResponse(formElement, 'Houve um erro ao enviar a mensagem', 'error');
 			}
 		}
 
@@ -92,7 +92,7 @@ function init() {
 	function displayAndRemoveResponse(formElement, message, className) {
 		var respElement = document.createElement('div');
 
-		respElement.setAttribute('class', className);
+		respElement.setAttribute('class', 'resp ' + (className || ''));
 		respElement.innerHTML = message;
 		formElement.appendChild(respElement);
 		setTimeout(function(){
@@ -102,7 +102,7 @@ function init() {
 
 	function isFormValid(type) {
 		if ((type === 'CAREER') && !getElement('.input-file').files[0]) {
-			displayAndRemoveResponse(getElement('.modal-form'), 'É necessário anexar o currículo', 'resp error');
+			displayAndRemoveResponse(getElement('.modal-form'), 'É necessário anexar o currículo', 'error');
 			return false;
 		}
 
@@ -140,8 +140,9 @@ function init() {
 	function openModal(key) {
 		clearTimeout(timeoutId);
 		getElement('.modal-overlay').classList.add('loading');
-		getElement('.modal-title').innerText = window.carrers[key].title;
-		getElement('.modal-description').innerText = window.carrers[key].text;
+		getElement('.modal-title').innerText = window.careers[key].title;
+		getElement('.modal-location').innerText = window.careers[key].location;
+		getElement('.modal-description').innerHTML = window.careers[key].text;
 		getElement('.modal-overlay').classList.add('show');
 		timeoutId = setTimeout(function() {
 			getElement('.modal-overlay').classList.remove('loading');

@@ -28,7 +28,7 @@
             <nav>
                 <ul>
                     <li onclick="goTo('culture')">Valores</li>
-                    <li onclick="goTo('carrer')">Trabalhe Conosco</li>
+                    <li onclick="goTo('career')">Trabalhe Conosco</li>
                     <li onclick="goTo('knowledge')">Quem somos</li>
                     <li onclick="goTo('contact')">Contato</li>
                 </ul>
@@ -79,6 +79,7 @@
         <div class="modal">
             <div class="modal-close" title="Fechar" alt="Fechar">&times;</div>
             <div class="modal-title"></div>
+            <div class="modal-location"></div>
             <div class="modal-description"></div>
             <form class="modal-form">
                 <div class="modal-form-title">Quero fazer parte!</div>
@@ -106,64 +107,59 @@
             </div>
         </div>
     </div>
-    <section id="carrer">
+    <section id="career">
         <div class="inner">
-            <h2 class="carrer-title">A DigitalBits está crescendo</h2>
-            <h3 class="carrer-subtitle">Cresça com a gente!</h3>
-            <div class="carrer-job-free">
-                <p><strong>Não encontrou a sua vaga neste momento?<br> Venha fazer parte do nosso banco de talentos!</strong></p>
-                <p>Pode não haver oportunidade para o seu perfil neste momento, mas nosso ciclo de expansão é curto e em breve pode surgir vagas de seu interesse, principalmente se você atua em algumas das seguintes areas: Tecnologia, Contabilidade, Recursos Humanos e Faturamento de Convênio Médico</p>
-                <p><a class="carrer-job-button">Quero fazer parte</a></p>
-            </div>
-            <p class="carrer-text">Nosso projeto cresce rápidamente e constantemente nos desafiamos, há sempre uma oportunidade de ser melhor. Nos esforçamos para elevar o nível de nossos produtos, nossas equipes e de nós mesmos.</p>
-            <p class="carrer-text">Buscamos por profissionais engajados, pessoas que se destacam e que fazem a diferença. Se você se identifica com nossos valores venha fazer parte do time!</p>
+            <h2 class="career-title">A DigitalBits está crescendo</h2>
+            <h3 class="career-subtitle">Cresça com a gente!</h3>
+            <p class="career-text">Nosso projeto cresce rápidamente e constantemente nos desafiamos, há sempre uma oportunidade de ser melhor. Nos esforçamos para elevar o nível de nossos produtos, nossas equipes e de nós mesmos.</p>
+            <p class="career-text">Buscamos por profissionais engajados, pessoas que se destacam e que fazem a diferença. Se você se identifica com nossos valores venha fazer parte do time!</p>
             <div class="clearfix"></div>
-            <h3 class="carrer-subtitle m-b-0">Vagas Disponíveis:</h3>
-            <div class="carrer-jobs">
-                <div class="carrer-job" onClick="openModal('BUSINESS-1')">
-                    <div class="carrer-job-title">Analista de Négocios <div class="carrer-job-local c1">Recife</div></div>
+            <h3 class="career-subtitle m-b-0">Vagas Disponíveis:</h3>
+            <div class="career-jobs">
+                <div class="career-job" onClick="openModal('BUSINESS-1')">
+                    <div class="career-job-title">Analista de Négocios <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('TESTER-1')">
-                    <div class="carrer-job-title">Analista de Testes <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('TESTER-1')">
+                    <div class="career-job-title">Analista de Testes <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('PRODUCT-MANAGER-1')">
-                    <div class="carrer-job-title">Gerente de Produtos <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('PRODUCT-MANAGER-1')">
+                    <div class="career-job-title">Gerente de Produtos <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('CUSTOMER-SUCCESS-1')">
-                    <div class="carrer-job-title">Customer Success <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('CUSTOMER-SUCCESS-1')">
+                    <div class="career-job-title">Customer Success Manager <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('SUPPORT-1')">
-                    <div class="carrer-job-title">Suporte <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('SUPPORT-1')">
+                    <div class="career-job-title">Suporte <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('FULLSTACK-1')">
-                    <div class="carrer-job-title">FullStack Developer <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('FULLSTACK-1')">
+                    <div class="career-job-title">FullStack Developer <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('FRONTEND-1')">
-                    <div class="carrer-job-title">Front-End Developer <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('FRONTEND-1')">
+                    <div class="career-job-title">Front-End Developer <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('BACKEND-1')">
-                    <div class="carrer-job-title">Back-End Developer <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('BACKEND-1')">
+                    <div class="career-job-title">Back-End Developer <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-REC-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c1">Recife</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-REC-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c1">Recife</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-BSB-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c2">Brasilia</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-BSB-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c2">Brasilia</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-FOR-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c3">Fortaleza</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-FOR-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c3">Fortaleza</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-SP-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c4">São Paulo</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-SP-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c4">São Paulo</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-RJ-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c5">Rio de Janeiro</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-RJ-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c5">Rio de Janeiro</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-SSA-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c6">Salvador</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-SSA-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c6">Salvador</div></div>
                 </div>
-                <div class="carrer-job" onClick="openModal('OPERATION-POA-1')">
-                    <div class="carrer-job-title">Implantador de Sistemas <div class="carrer-job-local c7">Porto Alegre</div></div>
+                <div class="career-job" onClick="openModal('OPERATION-POA-1')">
+                    <div class="career-job-title">Implantador de Sistemas <div class="career-job-local c7">Porto Alegre</div></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -282,7 +278,7 @@
         </script>
         <div class="clearfix"></div>
     </footer>
-    <script src="assets/js/carrer.js"></script>
+    <script src="assets/js/careers.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

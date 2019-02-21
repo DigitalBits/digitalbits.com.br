@@ -233,7 +233,7 @@ section {
     width: 800px;
     height: 500px;
     z-index: 1100;
-    margin-top: -250px;
+    margin-top: -350px;
     margin-left: -400px;
     position: absolute;
     box-shadow: 0 0 250px 80px #000;
@@ -251,10 +251,10 @@ section {
 .modal {
     background-color: #232a30;
     width: 1000px;
-    height: 700px;
+    min-height: 550px;
     top: 50%;
     left: 50%;
-    margin-top: -350px;
+    margin-top: -400px;
     margin-left: -500px;
     position: absolute;
     padding: 50px;
@@ -264,17 +264,19 @@ section {
 
 .modal strong {
     color: #16d592;
-    font-size: 20px;
     font-weight: normal;
-    margin-top: 24px;
-    display: block;
 }
 
 .modal-title {
     color: #16d592;
     font-size: 30px;
     font-weight: normal;
-    margin-bottom: 24px;
+}
+
+.modal-location {
+    color: #16d592;
+    font-size: 20px;
+    margin: 8px 0 24px;
 }
 
 .modal-description {
@@ -324,7 +326,6 @@ section {
 
 .modal-form-title {
     font-size: 24px;
-    text-align: center;
     margin-bottom: 40px !important;
 }
 
@@ -408,23 +409,23 @@ section {
 
 /* -------------------------- Carrer ---------------------------- */
 
-#carrer {
+#career {
     color: #232a30;
-    background-color: #fff;
+    background-color: #f6f6f6;
 }
 
-.carrer-title {
+.career-title {
     font-size: 34px;
     font-weight: normal;
 }
 
-.carrer-subtitle {
+.career-subtitle {
     font-size: 24px;
     font-weight: normal;
     margin: 16px 0;
 }
 
-.carrer-text {
+.career-text {
     margin: 8px 0;
     font-size: 18px;
     line-height: 24px;
@@ -432,48 +433,11 @@ section {
     float: left;
 }
 
-.carrer-text + .carrer-text {
+.career-text + .career-text {
     margin-bottom: 32px;
 }
 
-.carrer-job-free {
-    width: 350px;
-    float: right;
-    border: 1px solid #cacaca;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: #fafafa;
-    margin-top: -50px;
-    display: none;
-}
-
-.carrer-job-free p {
-    margin: 5px;
-}
-
-.carrer-job-button {
-    width: 200px;
-    cursor: pointer;
-    display: block;
-    color: #fff;
-    text-align: center;
-    color: #232a30;
-    border: 1px solid #232a30;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 10px 0;
-    border-radius: 25px;
-    margin: 20px auto 10px;
-}
-
-.carrer-job-button:hover {
-    color: #16d592;
-    border-color: #16d592;
-    background-color: #232a30;
-}
-
-.carrer-job {
+.career-job {
     width: 317px;
     float: left;
     margin-right: 24px;
@@ -481,24 +445,27 @@ section {
     cursor: pointer;
 }
 
-.carrer-job:nth-child(3n+3) {
+.career-job:nth-child(3n+3) {
     margin-right: 0;
 }
 
-.carrer-job-title {
+.career-job-title {
     font-size: 18px;
-    border-radius: 3px;
     padding: 16px;
-    border: 1px solid #eee;
-    background-color: #f5f5f5;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
 }
 
-.carrer-job-local {
+.career-job-title:hover {
+    border-color: #888;
+}
+
+.career-job-local {
     color: #fff;
     font-size: 12px;
     line-height: 22px;
     float: right;
-    border-radius: 3px;
+    border-radius: 1px;
     margin-top: -2px;
     margin-right: -8px;
     background-color: #ccc;
@@ -506,31 +473,31 @@ section {
     padding: 0 8px;
 }
 
-.carrer-job-local.c1 {
+.career-job-local.c1 {
     background-color: #27ae60;
 }
 
-.carrer-job-local.c2 {
+.career-job-local.c2 {
     background-color: #f1c40f;
 }
 
-.carrer-job-local.c3 {
+.career-job-local.c3 {
     background-color: #8e44ad;
 }
 
-.carrer-job-local.c4 {
+.career-job-local.c4 {
     background-color: #e74c3c;
 }
 
-.carrer-job-local.c5 {
+.career-job-local.c5 {
     background-color: #f39c12;
 }
 
-.carrer-job-local.c6 {
+.career-job-local.c6 {
     background-color: #2c3e50;
 }
 
-.carrer-job-local.c7 {
+.career-job-local.c7 {
     background-color: #2980b9;
 }
 
@@ -823,7 +790,7 @@ section {
 }
 
 .modal-overlay.loading .modal .spinner {
-    margin-top: 280px;
+    margin-top: 200px;
 }
 
 /*

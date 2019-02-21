@@ -1,4 +1,4 @@
-window.carrers = {
+window.careers = {
 	'BUSINESS-1': {
 		title: 'Analista de Négocios',
 		location: 'Recife',
@@ -15,9 +15,9 @@ window.carrers = {
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
 	},
 	'CUSTOMER-SUCCESS-1': {
-		title: 'Customer Success',
+		title: 'Customer Success Manager',
 		location: 'Recife',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
+		text: 'Você vai trabalhar diretamente com produto SaaS para clínicas médicas, com um número de usuários que não para de crescer!<br><br>Você terá sua carteira de clientes e será responsável pelo sucesso e satisfação deles na plataforma, é necessário entender o contexto e a necessidade de cada cliente, acompanhando desde fechamento do contrato e o início da operação do cliente, além de acompanhar pró-ativamente indicando maneiras de otimizar seus processos e gerar mais resultados, visando resolver todas as dúvidas e problemas, para fidelizá-los e encantá-los.<br><br><strong>Requisitos</strong><br>- Boa comunicação e empatia para entender as frustrações dos clientes<br>- Resiliência para lidar com situações de crise e contorná-las<br>- Organização para lidar com alto volume de empresas e contatos com demandas distintas<br>- Trabalho em equipe para o atingimento de métricas de retenção e satisfação<br>- Auto motivação para trabalhar pró-ativamente a própria carteira de clientes<br><br>A vaga é CLT com os benefícios: Vale-transporte, Vale-alimentação, Plano de saúde<br><br>Se interessou? :)<br>Preeche ao lado com suas informações ou envia um email para: vagas@digitalbits.com.br',
 	},
 	'SUPPORT-1': {
 		title: 'Suporte',
