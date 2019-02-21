@@ -7,7 +7,7 @@ window.careers = {
 	'TESTER-1': {
 		title: 'Analista de Testes',
 		location: 'Recife',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
+		text: '<strong>Requisitos e conhecimentos:</strong><br>- Conceitos de teste de software<br>- Conhecimento de estratégias de testes<br>- Processos de teste<br>- Técnicas de Teste<br>- Gerenciamento de defeitos: relatório de defeitos, classificação, rastreamento<br>- Experiência em Automação de Testes<br><br><strong>Esperamos que você:</strong><br>- Se comunique bem<br>- Se atualize com novas tecnologias<br>- Aprenda rápido. Evoluímos muito e muito rápido!<br>- Tenha capacidade de resolver problemas de forma rápida e completa<br><br><strong>Oferecemos:</strong><br>- Salários de R$ 2k a R$ 4k variando de acordo com sua experiência<br>- Vale Alimentação/Refeição<br>- Vale Tranporte/Cartão de Estacionamento<br>- Plano de saúde<br>- Contratação CLT<br><br>Interessou?<br>Envie seu Github + LinkedIn + CV e o que mais você achar interessante para: vagas@digitalbits.com.br',
 	},
 	'PRODUCT-MANAGER-1': {
 		title: 'Gerente de Produtos',
@@ -27,17 +27,17 @@ window.careers = {
 	'FULLSTACK-1': {
 		title: 'FullStack Developer',
 		location: 'Recife',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
+		text: '<strong>Requisitos e conhecimentos:</strong><br>- Goste de programar<br>- Javascript, muito Javascript<br>- Algoritmos, padrões de projeto e refatoração<br>- Sólido conhecimento em desenvolvimento web<br>- AngularJS<br>- PostgreSQL<br>- NodeJS<br><br><strong>Diferencial:</strong><br>- Amazon Web Services<br>- Experiência com manipulação de grandes volumes de dados<br><br><strong>Esperamos que você:</strong><br>- Se comunique bem<br>- Se atualize com novas tecnologias<br>- Aprenda rápido. Evoluímos muito e muito rápido!<br>- Tenha capacidade de resolver problemas de forma rápida e completa<br><br><strong>Oferecemos:</strong><br>- Salários de R$ 3k a R$ 7k variando de acordo com sua experiência<br>- Vale Alimentação/Refeição<br>- Vale Tranporte/Cartão de Estacionamento<br>- Plano de saúde<br>- Contratação CLT<br><br>Interessou?<br>Envie seu Github + LinkedIn + CV e o que mais você achar interessante para: vagas@digitalbits.com.br',
 	},
 	'FRONTEND-1': {
 		title: 'Front-End Developer',
 		location: 'Recife',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
+		text: '<strong>Requisitos e conhecimentos:</strong><br>- Goste de programar<br>- Javascript, muito Javascript<br>- Algoritmos, padrões de projeto e refatoração<br>- Sólido conhecimento em desenvolvimento web<br>- AngularJS<br><br><strong>Esperamos que você:</strong><br>- Se comunique bem<br>- Aprenda rápido. Evoluímos muito e muito rápido!<br>- Tenha capacidade de resolver problemas de forma rápida e completa<br><br><strong>Oferecemos:</strong><br>- Salários de R$ 3k a R$ 6k variando de acordo com sua experiência<br>- Vale Alimentação/Refeição<br>- Vale Tranporte/Cartão de Estacionamento<br>- Plano de saúde<br>- Contratação CLT<br><br>Interessou?<br>Envie seu Github + LinkedIn + CV e o que mais você achar interessante para: vagas@digitalbits.com.br<br><br>Está com mais alguma dúvida? Podemos conversar e te mostrar como é nossa vibe, nosso projeto, nossa empresa, os desafios que vamos ter pela frente e como você pode nos ajudar.',
 	},
 	'BACKEND-1': {
 		title: 'Back-End Developer',
 		location: 'Recife',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate numquam dolor, fugit ullam exercitationem illo porro corporis fuga mollitia earum inventore consequuntur? Repellat et provident culpa, impedit cum iste.',
+		text: '<strong>Requisitos e conhecimentos:</strong><br>- Goste de programar<br>- Javascript, muito Javascript<br>- Algoritmos, padrões de projeto e refatoração<br>- Sólido conhecimento em desenvolvimento web<br>- PostgreSQL<br>- NodeJS<br><br><strong>Diferencial:</strong><br>- Amazon Web Services<br>- Experiência com manipulação de grandes volumes de dados<br><br><strong>Esperamos que você:</strong><br>- Se comunique bem<br>- Se atualize com novas tecnologias<br>- Aprenda rápido. Evoluímos muito e muito rápido!<br>- Tenha capacidade de resolver problemas de forma rápida e completa<br><br><strong>Oferecemos:</strong><br>- Salários de R$ 3k a R$ 6k variando de acordo com sua experiência<br>- Vale Alimentação/Refeição<br>- Vale Tranporte/Cartão de Estacionamento<br>- Plano de saúde<br>- Contratação CLT<br><br>Interessou?<br>Envie seu Github + LinkedIn + CV e o que mais você achar interessante para: vagas@digitalbits.com.br',
 	},
 	'OPERATION-REC-1': {
 		title: 'Implantador de Sistemas',

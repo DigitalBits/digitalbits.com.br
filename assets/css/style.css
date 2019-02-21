@@ -466,8 +466,8 @@ section {
     line-height: 22px;
     float: right;
     border-radius: 1px;
-    margin-top: -2px;
-    margin-right: -8px;
+    margin-top: -16px;
+    margin-right: -16px;
     background-color: #ccc;
     text-transform: uppercase;
     padding: 0 8px;
