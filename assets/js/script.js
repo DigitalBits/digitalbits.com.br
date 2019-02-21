@@ -38,13 +38,17 @@ function init() {
 		var formElement;
 		var formData = new FormData();
 
+		if (!isFormValid(type)) {
+			return;
+		}
+
 		if (type === 'CAREER') {
-			mailUrl = 'mail-digitalbits-contact';
+			mailUrl = 'mail-digitalbits-career';
 			formElement = getElement('.modal-form');
 			formData.append('subject', getElement('.modal-title').innerText);
 			formData.append('file', getElement('.input-file').files[0]);
-		} else (type === 'CONTACT') {
-			mailUrl = 'mail-digitalbits-career';
+		} else if (type === 'CONTACT') {
+			mailUrl = 'mail-digitalbits-contact';
 			formElement = getElement('.contact-form');
 			formData.append('subject', formElement.elements.subject.value);
 		}
@@ -94,6 +98,15 @@ function init() {
 		setTimeout(function(){
 			formElement.removeChild(respElement);
 		},5000);
+	}
+
+	function isFormValid(type) {
+		if ((type === 'CAREER') && !getElement('.input-file').files[0]) {
+			displayAndRemoveResponse(getElement('.modal-form'), 'É necessário anexar o currículo', 'resp error');
+			return false;
+		}
+
+		return true;
 	}
 
 	function scollCheck() {
@@ -146,8 +159,8 @@ function init() {
 	getElement('.input-file').addEventListener('change', onChooseFile);
 	getElement('.modal-close').addEventListener('click', closeModal);
 	getElement('.fake-input-file').addEventListener('click', chooseFile);
-	getElement('.modal-form').addEventListener('submit', handleSubmit('CONTACT'));
-	getElement('.contact-form').addEventListener('submit', handleSubmit('CAREER'));
+	getElement('.modal-form').addEventListener('submit', handleSubmit('CAREER'));
+	getElement('.contact-form').addEventListener('submit', handleSubmit('CONTACT'));
 	setInterval(scollCheck, 200);
 	scollCheck();
 }
