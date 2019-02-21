@@ -374,9 +374,14 @@ section {
     background-color: #232a30;
 }
 
-.modal-form .button:hover {
+.modal-form .button:hover,
+.modal-form .button.active {
     color: #16d592;
     border-color: #16d592;
+}
+
+.modal-form .input-file {
+    display: none;
 }
 
 .modal-form .resp {
