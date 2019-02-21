@@ -26,70 +26,75 @@ function init() {
 		getElement('.fake-input-file').innerText = 'Arquivo anexado';
 	}
 
-	function submitContact(e) {
-		e.preventDefault();
+	function handleSubmit(type) {
+		return function(e) {
+			e.preventDefault();
+			continueSubmit(type);
+		}
+	}
 
-		var formElement = getElement('.contact-form');
-		var formData = '';
+	function continueSubmit(type) {
+		var mailUrl;
+		var formElement;
+		var formData = new FormData();
 
-		formData += 'name=' + encodeURIComponent(formElement.elements.name.value) + '&';
-		formData += 'email=' + encodeURIComponent(formElement.elements.email.value) + '&';
-		formData += 'subject=' + encodeURIComponent(formElement.elements.subject.value) + '&';
-		formData += 'message=' + encodeURIComponent(formElement.elements.message.value);
+		if (type === 'CAREER') {
+			mailUrl = 'mail-digitalbits-contact';
+			formElement = getElement('.modal-form');
+			formData.append('subject', getElement('.modal-title').innerText);
+			formData.append('file', getElement('.input-file').files[0]);
+		} else (type === 'CONTACT') {
+			mailUrl = 'mail-digitalbits-career';
+			formElement = getElement('.contact-form');
+			formData.append('subject', formElement.elements.subject.value);
+		}
 
-		sendEmail('mail-digitalbits-contato', formData, formElement, function() {
-			formElement.elements.name.value = '';
-			formElement.elements.email.value = '';
-			formElement.elements.subject.value = '';
-			formElement.elements.message.value = '';
-		});
-	};
+		formData.append('name', formElement.elements.name.value);
+		formData.append('email', formElement.elements.email.value);
+		formData.append('message', formElement.elements.message.value);
+		sendEmail(type, mailUrl, formData, formElement)
+	}
 
-	function submitCarrer(e) {
-		e.preventDefault();
-
-		var formElement = getElement('.modal-form');
-		var formData = '';
-
-		formData += 'name=' + encodeURIComponent(formElement.elements.name.value) + '&';
-		formData += 'email=' + encodeURIComponent(formElement.elements.email.value) + '&';
-		formData += 'subject=' + getElement('.modal-title').innerText + '&';
-		formData += 'message=' + encodeURIComponent(formElement.elements.message.value);
-
-		sendEmail('mail-digitalbits-carrer', formData, formElement, function() {
-			formElement.elements.name.value = '';
-			formElement.elements.email.value = '';
-			formElement.elements.message.value = '';
-		});
-	};
-
-	function sendEmail(type, formData, formElement, resetForm) {
+	function sendEmail(type, mailUrl, formData, formElement) {
 		var submitRequest = new XMLHttpRequest();
-		var respElement = document.createElement('div');
 
-		submitRequest.open('POST','https://guilhermefarias.com.br/' + type,true);
-		submitRequest.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-		submitRequest.onreadystatechange = function(){
+		submitRequest.open('POST','https://guilhermefarias.com.br/' + type);
+		submitRequest.onreadystatechange = function() {
 			if (submitRequest.readyState === 4 && submitRequest.status === 200 && submitRequest.responseText === 'OK'){
-				respElement.setAttribute('class','resp');
-				respElement.innerHTML = 'Mensagem enviada com sucesso!'; // Message sent successfully!
-				formElement.appendChild(respElement);
-				resetForm();
-				setTimeout(function(){
-					formElement.removeChild(respElement);
-				},5000);
-			} else if(submitRequest.readyState === 4){
-				respElement.setAttribute('class','resp error');
-				respElement.innerHTML = 'Houve um erro ao enviar a mensagem'; // There was an error sending the message
-				formElement.appendChild(respElement);
-				setTimeout(function(){
-					formElement.removeChild(respElement);
-				},5000);
+				displayAndRemoveResponse(formElement, 'Mensagem enviada com sucesso!', 'resp');
+				resetFields(formElement, type);
+			} else if (submitRequest.readyState === 4) {
+				displayAndRemoveResponse(formElement, 'Houve um erro ao enviar a mensagem', 'resp error');
 			}
-		};
+		}
 
 		submitRequest.send(formData);
-	};
+	}
+
+	function resetFields(formElement, type) {
+		formElement.elements.name.value = '';
+		formElement.elements.email.value = '';
+		formElement.elements.message.value = '';
+
+		if (type === 'CONTACT') {
+			formElement.elements.subject.value = '';
+		} else if (type === 'CAREER') {
+			getElement('.fake-input-file').classList.remove('active');
+			getElement('.fake-input-file').innerText = 'Anexar CV';
+			getElement('.input-file').value = '';
+		}
+	}
+
+	function displayAndRemoveResponse(formElement, message, className) {
+		var respElement = document.createElement('div');
+
+		respElement.setAttribute('class', className);
+		respElement.innerHTML = message;
+		formElement.appendChild(respElement);
+		setTimeout(function(){
+			formElement.removeChild(respElement);
+		},5000);
+	}
 
 	function scollCheck() {
 		if (window.pageYOffset === lastCheck) {
@@ -138,11 +143,11 @@ function init() {
 	window.openModal = openModal;
 	window.closeModal = closeModal;
 	document.addEventListener('keyup', onKeyUp);
-	getElement('.modal-form').addEventListener('submit', submitCarrer);
-	getElement('.contact-form').addEventListener('submit', submitContact);
+	getElement('.input-file').addEventListener('change', onChooseFile);
 	getElement('.modal-close').addEventListener('click', closeModal);
 	getElement('.fake-input-file').addEventListener('click', chooseFile);
-	getElement('.input-file').addEventListener('change', onChooseFile);
+	getElement('.modal-form').addEventListener('submit', handleSubmit('CONTACT'));
+	getElement('.contact-form').addEventListener('submit', handleSubmit('CAREER'));
 	setInterval(scollCheck, 200);
 	scollCheck();
 }
