@@ -146,7 +146,7 @@ function init() {
 		getElement('.modal-overlay').classList.add('show');
 		timeoutId = setTimeout(function() {
 			getElement('.modal-overlay').classList.remove('loading');
-		}, 800);
+		}, 300);
 	}
 
 	function closeModal() {
