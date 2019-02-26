@@ -119,6 +119,49 @@ header nav li:hover {
     color: #16d592;
 }
 
+.header-flags {
+    float: left;
+    width: 70px;
+    height: 20px;
+    margin-top: 16px;
+    transition: opacity 0.7s;
+    margin-left: calc(calc(50vw - 560px) / 2);
+}
+
+.header-flag {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 0 5px;
+    display: block;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.header-flag-text {
+    height: 0;
+    width: 70px;
+    text-align: center;
+    display: block;
+    margin-top: -16px;
+    float: left;
+    font-size: 8px;
+    color: #a0a0a0;
+}
+
+.header-flag:hover,
+.header-flag.active {
+    opacity: 1;
+}
+
+.header-flag.br {
+    background-image: url(../svg/brazil.svg);
+}
+
+.header-flag.en {
+    background-image: url(../svg/united-states.svg);
+}
+
 /*
 ---------------------------------------------------------------
 -------------------------- Section ----------------------------
