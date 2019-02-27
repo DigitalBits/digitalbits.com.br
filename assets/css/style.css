@@ -41,6 +41,10 @@ body {
     color: #fff;
 }
 
+body.overflow {
+    overflow: hidden;
+}
+
 input,
 textarea {
     outline: none;
@@ -606,6 +610,42 @@ section {
 .modal-form .resp.error {
     color: #e74c3c;
     border-color: #e74c3c;
+}
+
+
+@media (max-width: 1010px) {
+    .modal {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-left: 0;
+        padding: 50px;
+        overflow-y: auto;
+    }
+
+    .modal-close {
+        top: 0px;
+        right: 30px;
+        margin-top: 0;
+        margin-right: 0;
+        position: fixed;
+    }
+
+    .modal-description {
+        width: 100%;
+    }
+
+    .modal-form {
+        width: 100%;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 40px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        border-top: 1px solid #777;
+    }
 }
 
 /* -------------------------- Carrer ---------------------------- */

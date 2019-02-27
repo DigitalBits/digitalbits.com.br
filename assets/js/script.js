@@ -153,6 +153,7 @@ function init() {
 		getElement('.modal-location').innerText = window.careers[key].location;
 		getElement('.modal-description').innerHTML = window.careers[key].text;
 		getElement('.modal-overlay').classList.add('show');
+		getElement('body').classList.add('overflow');
 		timeoutId = setTimeout(function() {
 			getElement('.modal-overlay').classList.remove('loading');
 		}, 300);
@@ -160,6 +161,7 @@ function init() {
 
 	function closeModal() {
 		getElement('.modal-overlay').classList.remove('show');
+		getElement('body').classList.remove('overflow');
 	}
 
 	window.goTo = goTo;
