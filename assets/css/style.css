@@ -69,6 +69,16 @@ a {
     margin: 0 auto;
 }
 
+@media (max-width: 1010px) {
+    body {
+        background-image: none;
+    }
+
+    .inner {
+        width: 90%;
+    }
+}
+
 /*
 ---------------------------------------------------------------
 -------------------------- Header -----------------------------
@@ -162,6 +172,24 @@ header nav li:hover {
     background-image: url(../svg/united-states.svg);
 }
 
+@media (max-width: 1010px) {
+    .header-logo  {
+        width: 30px;
+        height: 42px;
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    header nav li {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .header-flags {
+        display: none;
+    }
+}
+
 /*
 ---------------------------------------------------------------
 -------------------------- Section ----------------------------
@@ -183,6 +211,14 @@ section {
     padding-top: 40px;
 }
 
+@media (max-width: 1010px) {
+    .banner-text {
+        width: 80%;
+        font-size: 32px;
+        line-height: 50px;
+    }
+}
+
 /* -------------------------- Culture ---------------------------- */
 
 #culture {
@@ -199,7 +235,6 @@ section {
     position: relative;
     margin-bottom: 100px;
 }
-
 
 .culture-picture img {
     width: 100%;
@@ -251,6 +286,33 @@ section {
 .culture-description {
     font-size: 18px;
     line-height: 22px;
+}
+
+@media (max-width: 1010px) {
+    #culture {
+        padding-top: 100px;
+        background-image: none;
+    }
+
+    .culture-picture {
+        width: 60%;
+        float: left;
+        margin: 0 20% 40px;
+    }
+
+    #culture h2 {
+        width: 100%;
+        float: left;
+        display: block;
+    }
+
+    .culture-box,
+    .culture-fited  {
+        width: 100%;
+        height: auto;
+        text-align: left;
+        margin-bottom: 40px;
+    }
 }
 
 /* -------------------------- Modal ---------------------------- */
@@ -452,6 +514,8 @@ section {
 
 /* -------------------------- Carrer ---------------------------- */
 
+
+
 #career {
     color: #232a30;
     background-color: #f6f6f6;
@@ -544,6 +608,12 @@ section {
     background-color: #2980b9;
 }
 
+@media (max-width: 1010px) {
+    .career-job,
+    .career-text {
+        width: 100%;
+    }
+}
 
 /* -------------------------- Knowledge ---------------------------- */
 
@@ -599,6 +669,19 @@ section {
     margin: 8px 0;
     line-height: 24px;
 }
+
+@media (max-width: 1010px) {
+    .knowlegde-areas {
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .knowlegde-text {
+        width: 100%;
+    }
+}
+
 
 /* -------------------------- Contact ---------------------------- */
 
@@ -767,6 +850,19 @@ section {
     background-color: #232a30;
 }
 
+@media (max-width: 1010px) {
+    .contact-form,
+    .contact-text {
+        padding: 0;
+        width: 100%;
+    }
+
+    .contact-form {
+        padding-bottom: 40px;
+        border: none;
+    }
+}
+
 /* -------------------------- Loading ---------------------------- */
 
 .spinner {
@@ -878,5 +974,15 @@ footer .inner {
     float: right;
     width: 500px;
     background-color: #ccc;
+}
+
+@media (max-width: 1010px) {
+    .footer-info {
+        width: 100%;
+    }
+
+    .footer-facebook {
+        display: none;
+    }
 }
 
