@@ -97,12 +97,6 @@ header {
     border-bottom: 1px solid #1f2327;
 }
 
-header.top {
-    transform: translateY(16px);
-    background-color: transparent;
-    border-color: transparent;
-}
-
 .header-logo {
     display: block;
     float: left;
@@ -172,6 +166,14 @@ header nav li:hover {
     background-image: url(../svg/united-states.svg);
 }
 
+@media (min-width: 1010px) {
+    header.top {
+        transform: translateY(16px);
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
 @media (max-width: 1010px) {
     .header-logo  {
         width: 30px;
@@ -187,6 +189,89 @@ header nav li:hover {
 
     .header-flags {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    header nav {
+        top: 40px;
+        left: 10%;
+        width: 80%;
+        display: none;
+        position: fixed;
+        z-index: 120;
+        background-color: #f6f6f6;
+    }
+
+    header.mobile-menu-opened nav {
+        display: block;
+    }
+
+    header nav li {
+        color: #232a30;
+        width: 100%;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 5%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header nav li:hover {
+        color: #232a30;
+    }
+
+    header.mobile-menu-opened .header-flags {
+        display: block;
+        position: fixed;
+        z-index: 120;
+        top: 380px;
+        left: 10px;
+        width: 100px;
+        left: 50%;
+        margin-left: -50px;
+    }
+
+    .header-flag {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-flag-text {
+        width: 100%;
+        font-size: 16px;
+        margin-top: -26px;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        width: 30px;
+        height: 40px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .mobile-menu-bar {
+        width: 30px;
+        height: 3px;
+        margin: 4px 0;
+        float: left;
+        background-color: #16d592;
+    }
+
+    .mobile-menu-overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        z-index: 110;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .mobile-menu-opened .mobile-menu-overlay  {
+        display: block;
     }
 }
 
@@ -672,13 +757,45 @@ section {
 
 @media (max-width: 1010px) {
     .knowlegde-areas {
-        width: 100%;
+        width: 440px;
         height: 500px;
+        float: none;
         margin: 0 auto;
     }
 
     .knowlegde-text {
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .knowlegde-areas {
+        width: 300px;
+        height: 350px;
+    }
+
+    .knowlegde-area {
+        width: 180px;
+        height: 180px;
+        line-height: 180px;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #16d592;
+    }
+
+    .knowlegde-area.business {
+        top: 12px;
+        left: 127px;
+    }
+
+    .knowlegde-area.ux {
+        top: 15px;
+        left: 5px;
+    }
+
+    .knowlegde-area.tech {
+        top: 118px;
+        left: 66px;
     }
 }
 
@@ -851,6 +968,28 @@ section {
 }
 
 @media (max-width: 1010px) {
+    #contact .inner {
+        position: relative;
+    }
+
+    #contact h3 {
+        display: none;
+    }
+
+    .contact-links {
+        width: 490px;
+        top: -120px;
+        right: 0;
+        position: absolute;
+    }
+
+    .contact-link {
+        width: auto;
+        margin-top: 0;
+        padding: 5px 20px;
+        border-radius: 20px;
+    }
+
     .contact-form,
     .contact-text {
         padding: 0;
@@ -860,6 +999,16 @@ section {
     .contact-form {
         padding-bottom: 40px;
         border: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-links {
+        width: 280px;
+    }
+
+    .contact-link {
+        width: 130px;
     }
 }
 

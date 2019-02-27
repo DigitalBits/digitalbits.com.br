@@ -8,7 +8,16 @@ function init() {
 	}
 
 	function goTo(id) {
+		closeMenu()
 		window.scrollTo(0, getElement('#' + id).offsetTop - 50);
+	}
+
+	function closeMenu() {
+		getElement('header').classList.remove('mobile-menu-opened');
+	}
+
+	function openMenu() {
+		getElement('header').classList.add('mobile-menu-opened');
 	}
 
 	function onKeyUp(e) {
@@ -159,6 +168,8 @@ function init() {
 	document.addEventListener('keyup', onKeyUp);
 	getElement('.input-file').addEventListener('change', onChooseFile);
 	getElement('.modal-close').addEventListener('click', closeModal);
+	getElement('.mobile-menu').addEventListener('click', openMenu);
+	getElement('.mobile-menu-overlay').addEventListener('click', closeMenu);
 	getElement('.fake-input-file').addEventListener('click', chooseFile);
 	getElement('.modal-form').addEventListener('submit', handleSubmit('CAREER'));
 	getElement('.contact-form').addEventListener('submit', handleSubmit('CONTACT'));
