@@ -176,7 +176,7 @@ header nav li:hover {
 
 @media (max-width: 1010px) {
     .header-logo  {
-        width: 30px;
+        width: 32px;
         height: 42px;
         overflow: hidden;
         background-size: cover;
@@ -301,6 +301,14 @@ section {
         width: 80%;
         font-size: 32px;
         line-height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-text {
+        width: 100%;
+        padding: 0;
+        margin-top: -50px;
     }
 }
 
@@ -564,6 +572,9 @@ section {
     border: 1px solid #aaa;
     text-transform: uppercase;
     background-color: #232a30;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .modal-form .button:hover,
@@ -770,7 +781,7 @@ section {
 
 @media (max-width: 600px) {
     .knowlegde-areas {
-        width: 300px;
+        width: 310px;
         height: 350px;
     }
 
@@ -900,6 +911,9 @@ section {
     border: 1px solid #232a30;
     text-transform: uppercase;
     background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .contact-form .submit:hover {
@@ -978,9 +992,11 @@ section {
 
     .contact-links {
         width: 490px;
-        top: -120px;
-        right: 0;
+        bottom: -70px;
+        left: 50%;
+        margin-left: -245px;
         position: absolute;
+        padding-top: 30px;
     }
 
     .contact-link {
@@ -998,13 +1014,20 @@ section {
 
     .contact-form {
         padding-bottom: 40px;
-        border: none;
+        border-right: 0;
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
     }
 }
 
 @media (max-width: 600px) {
     .contact-links {
         width: 280px;
+        left: 50%;
+        bottom: -94px;
+        margin-left: -140px;
     }
 
     .contact-link {
