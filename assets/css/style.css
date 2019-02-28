@@ -421,6 +421,7 @@ section {
     height: 100%;
     display: none;
     position: fixed;
+    overflow-y: auto;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -430,14 +431,11 @@ section {
 }
 
 .modal-shadow {
-    top: 50%;
-    left: 50%;
     width: 800px;
     height: 500px;
     z-index: 1100;
-    margin-top: -350px;
-    margin-left: -400px;
-    position: absolute;
+    margin: 200px auto;
+    position: relative;
     box-shadow: 0 0 250px 80px #000;
 }
 
@@ -451,17 +449,15 @@ section {
 }
 
 .modal {
-    background-color: #232a30;
     width: 1000px;
-    min-height: 550px;
-    top: 50%;
-    left: 50%;
-    margin-top: -400px;
-    margin-left: -500px;
-    position: absolute;
+    min-height: 600px;
+    margin: 100px auto;
     padding: 50px;
+    position: relative;
     z-index: 1200;
+    margin-top: -820px;
     border: 1px solid #16d592;
+    background-color: #232a30;
 }
 
 .modal strong {
@@ -621,7 +617,7 @@ section {
         left: 0;
         margin-top: 0;
         margin-left: 0;
-        padding: 50px;
+        padding: 50px 5%;
         overflow-y: auto;
     }
 
